@@ -13,15 +13,15 @@ function PreOrderDelivery() {
       <div className={styles.content}>
         <OnOffButton id={ID_3} />
         <div>
-          주문 시간
+          <span>주문 시간</span>
           <Calender />
-          ~
+          <span>~</span>
           <Calender />
         </div>
         <div>
-          새벽 배송
+          <span>새벽 배송</span>
           <ShortCalender />
-          일반 배송
+          <span>일반 배송</span>
           <ShortCalender />
         </div>
       </div>
