@@ -1,6 +1,7 @@
 import React from "react";
-
 import styles from "./Admin.module.css";
+import { ProductDelivery } from "./ProductDelivery";
+import ProductPeriodSetup from "./ProductPeriodSetup";
 
 const MockData = [
   { id: "m1", menu: "기본설정" },
@@ -65,6 +66,8 @@ const Admin = () => {
             <button>저장하기</button>
           </div>
         </div>
+        <ProductPeriodSetup />
+        <ProductDelivery />
       </section>
     </div>
   );
