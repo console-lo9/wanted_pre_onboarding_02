@@ -16,7 +16,10 @@ function PreOrderDelivery({ checked3, setChecked1, setChecked2, setChecked3 }) {
   };
   return (
     <SectionBody children="flexBox">
-      <ContentBodyTitle children="선 주문 예약 배송"></ContentBodyTitle>
+      <ContentBodyTitle>
+        선 주문
+        <br /> 예약 배송
+      </ContentBodyTitle>
       <SectionBodyContent>
         <OnOffButton id={ID_3} onClick={handleClick} checked={checked3} />
         <div>

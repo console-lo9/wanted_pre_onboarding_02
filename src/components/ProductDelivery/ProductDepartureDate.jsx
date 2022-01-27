@@ -15,7 +15,10 @@ function ProductDepartureDate({ checked1, setChecked1, setChecked3 }) {
   };
   return (
     <SectionBody>
-      <ContentBodyTitle children="사용자 배송일 출발일 지정"></ContentBodyTitle>
+      <ContentBodyTitle>
+        사용자 배송일
+        <br /> 출발일 지정
+      </ContentBodyTitle>
       <SectionBodyContent>
         <OnOffButton id={ID_1} onClick={handleClick} checked={checked1} />
       </SectionBodyContent>

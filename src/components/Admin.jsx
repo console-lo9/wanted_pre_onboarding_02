@@ -65,9 +65,9 @@ const Admin = () => {
             <div>상품 등록</div>
             <button>저장하기</button>
           </div>
+          <ProductPeriodSetup />
+          <ProductDelivery />
         </div>
-        <ProductPeriodSetup />
-        <ProductDelivery />
       </section>
     </div>
   );
