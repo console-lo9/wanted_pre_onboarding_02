@@ -1,3 +1,4 @@
+import SectionWrapper from "layout/Section/SectionWrapper";
 import DownArrowSVG from "utils/svg/down-arrow";
 import styles from "./Admin.module.css";
 
@@ -20,7 +21,7 @@ const MockData = [
 
 const Admin = () => {
   return (
-    <div>
+    <div className={styles.admin}>
       <header className={styles.header}>
         <nav className={`${styles["nav-top"]}`}>
           <div className={styles.logo}>
@@ -58,10 +59,7 @@ const Admin = () => {
           })}
           <svg></svg>
         </nav>
-      </section>
-      <section>
         <div>
-          <div></div>
           <div>
             <div>상품 등록</div>
             <button>저장하기</button>

@@ -1,6 +1,11 @@
+.admin {
+  display: flex;
+}
+
 .header {
   position: fixed;
   width: 100%;
+  z-index: 100;
 }
 .header nav {
   height: 40px;
@@ -27,6 +32,10 @@
 }
 
 .body {
+  position: relative;
+  top: 100px;
+  z-index: 1;
+  display: flex;
 }
 
 .left-nav {
@@ -44,7 +53,4 @@
   padding: 15px;
   border: 1px solid black;
   list-style: none;
-}
-
-.left-nav li {
 }
