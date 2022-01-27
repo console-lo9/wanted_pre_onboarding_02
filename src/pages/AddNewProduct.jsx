@@ -1,10 +1,10 @@
+import ProductPeriodSetup from "components/ProductPeriodSetup";
 import React from "react";
 
-import FilterTag from "components/ProductInfo/FilterTag";
 function ProductRegistration() {
   return (
     <div>
-      <FilterTag />
+      <ProductPeriodSetup />
     </div>
   );
 }
