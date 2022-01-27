@@ -1,2 +1,13 @@
-.content {
+.content ul {
+  display: inline-flexbox;
+}
+
+.content ul li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.content p {
+  margin: 0;
 }
