@@ -1,3 +1,4 @@
+import ProductPeriodSetup from "components/ProductPeriodSetup";
 import React from "react";
 import ProductInfo from "components/ProductInfo";
 
