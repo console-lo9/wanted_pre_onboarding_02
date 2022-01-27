@@ -9,6 +9,7 @@ function OnOffButton(props) {
         type="checkbox"
         className={styles.btn}
         checked={props.checked}
+        onChange={props.onClick}
       />
       <label htmlFor={props.id} className={styles.label}>
         <span></span>

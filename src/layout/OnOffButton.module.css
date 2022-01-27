@@ -6,7 +6,7 @@
 .label {
   display: block;
   position: relative;
-  width: 60px;
+  width: 40px;
   height: 14px;
   border-radius: 17px;
   background-color: gray;
@@ -18,12 +18,12 @@
   position: absolute;
   left: 0;
   top: -3px;
-  /* transform: translateY(14px); */
   z-index: 1;
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: red;
+  background-color: #fff;
+  box-shadow: 1px 1px 2px 1px #999;
   transition-duration: 0.2s;
 }
 
@@ -54,5 +54,5 @@
 
 .btn:checked + .label span {
   background-color: blue;
-  transform: translateX(40px);
+  transform: translateX(20px);
 }
