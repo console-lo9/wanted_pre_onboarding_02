@@ -2,6 +2,10 @@ import React, { useState } from "react";
 import ProductCode from "./ProductCode";
 
 import styles from "components/ProductInfo/ProductInfo.module.css";
+
+import ContentBodyTitle from "layout/Section/ContentBodyTitle";
+import SectionBody from "layout/Section/SectionBody";
+import SectionBodyContent from "layout/Section/SectionBodyContent";
 const ProductName = () => {
   const [inputs, setInputs] = useState({
     product: "",
@@ -18,13 +22,15 @@ const ProductName = () => {
   const { product } = inputs;
 
   return (
-    <div className={styles.container}>
-      <div>상품명</div>
-      <div>
+    <SectionBody className={styles.container}>
+      <ContentBodyTitle>
+        <p>상품명</p>
+      </ContentBodyTitle>
+      <SectionBodyContent>
         <input type="text" name="product" value={product} onChange={onChange} />
-      </div>
+      </SectionBodyContent>
       <ProductCode />
-    </div>
+    </SectionBody>
   );
 };
 

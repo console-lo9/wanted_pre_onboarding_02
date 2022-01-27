@@ -1,15 +1,21 @@
 import React from "react";
 import styles from "components/ProductInfo/ProductInfo.module.css";
 
+import ContentBodyTitle from "layout/Section/ContentBodyTitle";
+import SectionBody from "layout/Section/SectionBody";
+import SectionBodyContent from "layout/Section/SectionBodyContent";
+
 const FilterTag = () => {
   return (
-    <div className={styles.container}>
-      <div>필터 태그</div>
-      <div>
+    <SectionBody className={styles.container}>
+      <ContentBodyTitle>
+        <p>필터 태그</p>
+      </ContentBodyTitle>
+      <SectionBodyContent>
         <input type="text"></input>
         <button>검색</button>
-      </div>
-    </div>
+      </SectionBodyContent>
+    </SectionBody>
   );
 };
 

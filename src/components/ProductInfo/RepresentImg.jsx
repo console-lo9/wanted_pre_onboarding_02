@@ -1,14 +1,18 @@
 import React from "react";
 
 import styles from "components/ProductInfo/ProductInfo.module.css";
+
+import ContentBodyTitle from "layout/Section/ContentBodyTitle";
+import SectionBody from "layout/Section/SectionBody";
+import SectionBodyContent from "layout/Section/SectionBodyContent";
 const RepresentImg = () => {
   return (
-    <div className={styles.container}>
-      <div>상품 대표 이미지</div>
-      <div>
+    <SectionBody className={styles.container}>
+      <ContentBodyTitle>상품 대표 이미지</ContentBodyTitle>
+      <SectionBodyContent>
         <button>+ 이미지 첨부</button>
-      </div>
-    </div>
+      </SectionBodyContent>
+    </SectionBody>
   );
 };
 
