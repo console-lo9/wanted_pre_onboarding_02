@@ -1,12 +1,8 @@
 import React from "react";
+import Admin from "components/Admin";
 
-import FilterTag from "components/ProductInfo/FilterTag";
 function ProductRegistration() {
-  return (
-    <div>
-      <FilterTag />
-    </div>
-  );
+  return <Admin />;
 }
 
 export default ProductRegistration;

@@ -1,0 +1,22 @@
+.header nav {
+  height: 40px;
+}
+
+.nav-top {
+  background: black;
+  width: auto;
+}
+
+.nav-bottom {
+  background: #fff;
+
+  border-bottom: 2px solid rgb(234, 234, 234);
+}
+.logo img {
+  width: 100px;
+}
+
+.logo span {
+  color: #fff;
+  font-size: 20px;
+}
