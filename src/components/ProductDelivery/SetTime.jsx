@@ -1,6 +1,6 @@
 import Calender from "layout/Calender";
 import ShortCalender from "layout/ShortCalender";
-import React, { Fragment, useState } from "react";
+import React from "react";
 import styles from "./SetTime.module.css";
 
 function SetTime({}) {

@@ -1,0 +1,56 @@
+.admin {
+  display: flex;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+.header nav {
+  height: 40px;
+}
+
+.nav-top {
+  background: black;
+  width: auto;
+}
+
+.nav-bottom {
+  background: #fff;
+
+  border-bottom: 2px solid rgb(234, 234, 234);
+}
+
+.logo img {
+  width: 100px;
+}
+
+.logo span {
+  color: #fff;
+  font-size: 20px;
+}
+
+.body {
+  position: relative;
+  top: 100px;
+  z-index: 1;
+  display: flex;
+}
+
+.left-nav {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.left-nav img {
+  width: 80px;
+}
+
+.left-nav ul {
+  margin: 0;
+  padding: 15px;
+  border: 1px solid black;
+  list-style: none;
+}
