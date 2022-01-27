@@ -4,21 +4,29 @@ import SectionBody from "layout/Section/SectionBody";
 import SectionBodyContent from "layout/Section/SectionBodyContent";
 import { useState } from "react";
 import Calendar from "react-calendar";
+import { useDispatch, useSelector } from "react-redux";
+import { setPeriodActions } from "store";
 import userSelectionMockData from "utils/product-period-data";
 
 import stylse from "./ProductExposurePeriod.module.css";
 
 const ProductExposurePeriod = () => {
+  const dispatch = useDispatch();
   const [isCalendarOpened, setIsCalendarOpened] = useState(false);
   const [newDate, setNewDate] = useState({ date: new Date() });
-  const [changeRadio, setChangeRadio] = useState("제한 없음");
+  const checkedRadio = useSelector((state) => state.exposure.radio);
 
   const checkSelectionHandler = (e) => {
-    setChangeRadio(e.target.value);
+    dispatch(setPeriodActions.exposureRadio(e.target.value));
   };
 
   const openCalendarHandler = () => {
     return setIsCalendarOpened(!isCalendarOpened);
+  };
+
+  const getDateHandler = (date) => {
+    setIsCalendarOpened(false);
+    setNewDate({ date: date });
   };
 
   const userSelectionLists = userSelectionMockData.map((data) => (
@@ -26,18 +34,12 @@ const ProductExposurePeriod = () => {
       <RadioInput
         value={data.selection}
         onChange={checkSelectionHandler}
-        checked={changeRadio === data.selection}
+        checked={checkedRadio === data.selection}
       />
       <p>{data.selection}</p>
     </li>
   ));
 
-  const getDateHandler = (date) => {
-    setIsCalendarOpened(false);
-    setNewDate({ date: date });
-  };
-
-  console.log(newDate.date);
   return (
     <SectionBody className={stylse.exposure}>
       <ContentBodyTitle>상품 노출 기한</ContentBodyTitle>

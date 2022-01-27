@@ -3,6 +3,8 @@ import SectionBodyContent from "layout/Section/SectionBodyContent";
 import RadioInput from "layout/Inputs/RadioInput";
 import ContentBodyTitle from "layout/Section/ContentBodyTitle";
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setPeriodActions } from "store";
 
 const userSelectionMockData = [
   { id: 1, selection: "제한 없음" },
@@ -11,10 +13,11 @@ const userSelectionMockData = [
 ];
 
 const ProductSalsePeriod = () => {
-  const [changedRadio, setChangeRadio] = useState("제한 없음");
+  const dispatch = useDispatch();
+  const changedRadio = useSelector((state) => state.sales.radio);
 
   const checkSelectionHandler = (e) => {
-    setChangeRadio(e.target.value);
+    dispatch(setPeriodActions.salesRadio(e.target.value));
   };
 
   console.log(changedRadio);
