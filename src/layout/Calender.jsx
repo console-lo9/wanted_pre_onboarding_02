@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
+import AdapterDateFns from "@mui/lab/AdapterDateFns";
+import LocalizationProvider from "@mui/lab/LocalizationProvider";
+import DesktopDateTimePicker from "@mui/lab/DesktopDateTimePicker";
+import { TextField } from "@mui/material";
 
-function Calender(props) {
+function Calender() {
+  const [value, setValue] = useState();
   return (
-    <input
-      type={props.type}
-      name={props.name}
-      placeholder={props.placeholder}
-      value={props.value}
-      onChange={props.onChange}
-    ></input>
+    <LocalizationProvider dateAdapter={AdapterDateFns}>
+      <DesktopDateTimePicker
+        value={value}
+        onChange={(newValue) => {
+          setValue(newValue);
+        }}
+        renderInput={(params) => <TextField {...params} />}
+      />
+    </LocalizationProvider>
   );
 }
 
