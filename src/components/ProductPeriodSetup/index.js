@@ -5,13 +5,11 @@ import ProductSalsePeriod from "./ProductSalesPeriod.jsx";
 
 const ProductPeriodSetup = () => {
   return (
-    <div>
-      <SectionWrapper>
-        <SectionHeader>노출 및 판매 기간 설정</SectionHeader>
-        <ProductExposurePeriod />
-        <ProductSalsePeriod />
-      </SectionWrapper>
-    </div>
+    <SectionWrapper>
+      <SectionHeader>노출 및 판매 기간 설정</SectionHeader>
+      <ProductExposurePeriod />
+      <ProductSalsePeriod />
+    </SectionWrapper>
   );
 };
 
