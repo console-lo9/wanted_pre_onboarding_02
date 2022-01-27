@@ -1,9 +1,9 @@
-import Calender from "layout/Calender";
+import Calendar from "layout/Calendar";
 import OnOffButton from "layout/OnOffButton";
 import ContentBodyTitle from "layout/Section/ContentBodyTitle";
 import SectionBody from "layout/Section/SectionBody";
 import SectionBodyContent from "layout/Section/SectionBodyContent";
-import ShortCalender from "layout/ShortCalender";
+import ShortCalendar from "layout/ShortCalendar";
 import React, { useState } from "react";
 import styles from "./PreOrderDelivery.module.css";
 import SetTime from "./SetTime";
@@ -16,6 +16,7 @@ function PreOrderDelivery({ checked3, setChecked1, setChecked2, setChecked3 }) {
     setChecked1(false);
     setChecked2(false);
   };
+
   return (
     <SectionBody children="flexBox">
       <ContentBodyTitle children="선 주문 예약 배송"></ContentBodyTitle>
@@ -23,15 +24,15 @@ function PreOrderDelivery({ checked3, setChecked1, setChecked2, setChecked3 }) {
         <OnOffButton id={ID_3} onClick={handleClick} checked={checked3} />
         <div>
           <span>주문 시간</span>
-          <Calender />
+          <Calendar />
           <span>~</span>
-          <Calender />
+          <Calendar />
         </div>
         <div>
           <span>새벽 배송</span>
-          <ShortCalender />
+          <ShortCalendar />
           <span>일반 배송</span>
-          <ShortCalender />
+          <ShortCalendar />
         </div>
       </SectionBodyContent>
     </SectionBody>
