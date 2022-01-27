@@ -1,0 +1,13 @@
+.exposure ul {
+  display: inline-flexbox;
+}
+
+.exposure li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.exposure p {
+  margin: 0;
+}
