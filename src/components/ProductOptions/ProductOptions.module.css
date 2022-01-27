@@ -1,0 +1,59 @@
+.optionContainer {
+  margin-top: 30px;
+  background-color: rgb(255, 255, 255);
+}
+
+.imgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(197, 194, 194);
+  height: 250px;
+}
+
+.optionContents {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-top: 20px;
+  border: 0.1px solid rgb(202, 201, 201);
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.optionBtn {
+  background-color: rgb(252, 252, 252);
+  border: 2px solid rgb(212, 108, 108);
+  color: rgb(212, 108, 108);
+  border-radius: 5px;
+  border-width: 2px;
+  width: 80px;
+  height: 40px;
+}
+.inputOption {
+  width: 1000px;
+  height: 55px;
+  margin-top: 20px;
+  border-radius: 3px;
+  border-width: 1px;
+  font-size: 16px;
+  padding-left: 15px;
+}
+.inputSmall {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.inputOptionSmall {
+  width: 150px;
+  height: 40px;
+  border-radius: 4px;
+  border-width: 1px;
+  padding-left: 15px;
+}
+.optionLabel {
+  margin-left: 10px;
+  margin-right: 20px;
+}

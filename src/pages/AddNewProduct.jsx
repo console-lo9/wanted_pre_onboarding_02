@@ -1,10 +1,11 @@
+import ProductOptions from "components/ProductOptions/ProductOptions";
 import React from "react";
+import style from "../pages/AddNewProduct.module.css";
 
-import FilterTag from "components/ProductInfo/FilterTag";
 function ProductRegistration() {
   return (
-    <div>
-      <FilterTag />
+    <div className={style.container}>
+      <ProductOptions />
     </div>
   );
 }
