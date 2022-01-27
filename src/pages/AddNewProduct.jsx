@@ -1,10 +1,10 @@
 import React from "react";
 
-import FilterTag from "components/ProductInfo/FilterTag";
+import { ProductDelivery } from "components/ProductDelivery";
 function ProductRegistration() {
   return (
     <div>
-      <FilterTag />
+      <ProductDelivery />
     </div>
   );
 }
