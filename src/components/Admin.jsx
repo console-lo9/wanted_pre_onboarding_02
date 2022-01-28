@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./Admin.module.css";
 import { ProductDelivery } from "./ProductDelivery";
 import ProductPeriodSetup from "./ProductPeriodSetup";
+import ProductThumbnail from "./ProductThumbnail";
 
 const MockData = [
   { id: "m1", menu: "기본설정" },
@@ -76,21 +77,10 @@ const Admin = () => {
             <Button Button tag="save">
               저장하기
             </Button>
-            <Button Button tag="delete">
-              삭제
-            </Button>
-            <Button Button tag="add">
-              + 옵션 세트 추가
-            </Button>
-            <Button Button tag="add">
-              + 이미지 첨부
-            </Button>
-            <Button Button tag="category">
-              + 이미지 첨부
-            </Button>
           </div>
           <ProductPeriodSetup />
           <ProductDelivery />
+          <ProductThumbnail />
         </div>
       </section>
     </div>

@@ -1,7 +1,9 @@
 :root {
   --maincolor-deepblue: rgb(53, 47, 110);
-  --maincolor-lightgrey: rgb(239, 238, 243);
   --maincolor-red: rgb(220, 44, 44);
+  --maincolor-lightgrey: rgb(239, 238, 243);
+  --maincolor-grey: rgb(227, 227, 227);
+  --maincolor-heavygrey: rgb(247, 247, 247);
 }
 
 body {

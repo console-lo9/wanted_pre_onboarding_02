@@ -4,5 +4,8 @@
   padding: 0;
   margin: 0;
 
-  border: 1px solid gainsboro;
+  border: none;
+  outline: 1px solid var(--maincolor-grey);
+
+  min-height: 100px;
 }

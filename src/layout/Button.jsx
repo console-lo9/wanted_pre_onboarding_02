@@ -7,7 +7,7 @@ const AddButton = (props) => {
     <button
       className={`${styles.button} ${styles[tag]}`}
       tag={props.tag}
-      type={"button" || props.type}
+      type={`${props.type}`}
     >
       {props.children}
     </button>

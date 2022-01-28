@@ -4,6 +4,7 @@
   border-radius: 4px;
   padding: 8px 20px;
   margin: 0 5px;
+  cursor: pointer;
 }
 .save {
   background: var(--maincolor-deepblue);
@@ -26,4 +27,21 @@
 .category {
   background: var(--maincolor-lightgrey);
   outline: 2px solid var(--maincolor-deepblue);
+}
+
+.addIMG {
+  background: transparent;
+  outline: 2px solid rgb(53, 47, 110);
+  border-radius: 0px;
+}
+
+.xBadge {
+  background: transparent;
+  border-radius: 50%;
+  border: 2px solid var(--maincolor-grey);
+  height: 25px;
+  width: 25px;
+
+  padding: 3px;
+  margin: 5px;
 }
