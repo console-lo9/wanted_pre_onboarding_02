@@ -1,4 +1,4 @@
-import React, { useContext, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 
 import { ImageContext } from "components/ProductInfo/UploadImage/Contexts";
 
@@ -7,9 +7,15 @@ const AttachImage = ({ multiple }) => {
   const fileInput = useRef();
   const onLoadFile = (e) => {
     if (multiple) {
-      setImages([...images, e.target.files[0]]);
+      let files = [];
+      Object.entries(e.target.files).map(([id, item]) => {
+        files.push(item.name);
+      });
+      setImages(images.concat(files));
+      e.target.value = "";
     } else {
-      setImages([e.target.files[0]]);
+      setImages([e.target.files[0].name]);
+      e.target.value = "";
     }
   };
   const handleClick = () => {
