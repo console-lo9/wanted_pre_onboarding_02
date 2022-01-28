@@ -5,8 +5,6 @@ import SectionBody from "layout/Section/SectionBody";
 import SectionBodyContent from "layout/Section/SectionBodyContent";
 import ShortCalendar from "layout/ShortCalendar";
 import React, { useEffect, useState } from "react";
-import styles from "./PreOrderDelivery.module.css";
-import SetTime from "./SetTime";
 
 const ID_3 = "id3";
 
