@@ -7,6 +7,7 @@ const Input = (props) => {
     placeholder = "",
     value,
     onChange,
+    id = "",
     className = "",
     required = true,
   } = props;
@@ -17,6 +18,7 @@ const Input = (props) => {
       placeholder={placeholder}
       value={value}
       onChange={onChange}
+      id={id}
       className={className}
       required={required}
     />

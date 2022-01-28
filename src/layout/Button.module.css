@@ -32,7 +32,7 @@
 .addIMG {
   background: transparent;
   outline: 2px solid rgb(53, 47, 110);
-  border-radius: 0px;
+  border-radius: 2px;
 }
 
 .xBadge {

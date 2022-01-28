@@ -2,6 +2,7 @@ import Button from "layout/Button";
 import React from "react";
 import styles from "./Admin.module.css";
 import { Etc } from "./Etc";
+import { NoticeProductInfo } from "./NoticeProductInfo";
 import { ProductBenefit } from "./ProductBenefit";
 import { ProductDelivery } from "./ProductDelivery";
 import ProductInfo from "./ProductInfo";
@@ -84,6 +85,7 @@ const Admin = () => {
           </div>
           <ProductPeriodSetup />
           <ProductInfo />
+          <NoticeProductInfo />
           <ProductOptions />
           <ProductThumbnail />
           <ProductDelivery />

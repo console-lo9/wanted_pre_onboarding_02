@@ -2,12 +2,12 @@ import { useRef, useState } from "react";
 
 import SectionBody from "layout/Section/SectionBody";
 import SectionBodyContent from "layout/Section/SectionBodyContent";
-import UploadInput from "layout/Inputs/UploadInput";
+import UploadInput from "components/UploadImages/UploadInput";
 import Button from "layout/Button";
 
 import styles from "./AddImage.module.css";
 
-const AddImage = () => {
+const AddImage = ({ multiple }) => {
   const uploadRef = useRef();
   const [uploadedImg, setUploadedImg] = useState([]);
 
@@ -18,11 +18,9 @@ const AddImage = () => {
   const changeFileHandler = (e) => {
     const files = e.target.files;
 
-    for (let i = 0; i < files.length; i++) {
-      setUploadedImg((prev) => {
-        return [...prev, { id: Math.random(), name: files[i].name }];
-      });
-    }
+    setUploadedImg((prev) => {
+      return [{ id: files.id, name: files.name }, ...prev];
+    });
   };
 
   const removeHandler = (e) => {
@@ -37,6 +35,7 @@ const AddImage = () => {
           onClick={uploadHandler}
           onChange={changeFileHandler}
           uploadRef={uploadRef}
+          multiple={multiple}
         >
           + 이미지 추가
         </UploadInput>

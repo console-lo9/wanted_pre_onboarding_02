@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import { CategoryContext } from "./Contexts";
 
+import styles from "./Checkbox.module.css";
+
 const Checkbox = ({ value, index }) => {
   const [checked, setChecked] = useState(false);
   const checkHandler = (e) => {
@@ -9,12 +11,16 @@ const Checkbox = ({ value, index }) => {
   };
   const { checkedItemHandler } = useContext(CategoryContext);
   return (
-    <input
-      type="checkbox"
-      checked={checked}
-      value={value}
-      onChange={(e) => checkHandler(e)}
-    />
+    <div>
+      <input
+        className={styles.checkbox}
+        type="checkbox"
+        checked={checked}
+        value={value}
+        onChange={(e) => checkHandler(e)}
+      />
+      <label htmlFor={value}></label>
+    </div>
   );
 };
 

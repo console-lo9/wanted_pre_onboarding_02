@@ -11,7 +11,6 @@ const SearchList = ({ userInput, values }) => {
   useEffect(() => {
     const v = values.filter((value) => value.includes(userInput));
     setMatchValues(v);
-    matchValues.length !== 0 ? console.log("true") : console.log("false");
   }, [userInput]);
 
   return (
