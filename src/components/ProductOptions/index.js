@@ -1,33 +1,68 @@
 import React, { useState } from "react";
 import SectionWrapper from "layout/Section/SectionWrapper";
 import SectionHeader from "layout/Section/SectionHeader";
-import OptionEditor from "components/ProductOptions/OptionEditor";
-import OptionList from "components/ProductOptions/OptionList";
+
 import uuid from "utils/uuid";
+import OptionSet from "./OptionSet";
 
 const ProductOptionIdx = () => {
-  const [optionList, setOptionList] = useState([]);
+  const [optionSetList, setOptionSetList] = useState([]);
 
-  const onCreate = () => {
+  const onCreate = (targetId, newOption) => {
     const newOptionItem = {
       id: crypto.randomUUID(),
     };
-    setOptionList([...optionList, newOptionItem]);
+
+    // 어떤 리스트에 추가할 것인가? => id에 해당하는 값을...
+    // 어떤 option을 추가할 것인가?
+    setOptionSetList((prev) =>
+      prev.map((item) => {
+        if (item.id !== targetId) return item; // 원래 아이템을 그대로 둔다!
+
+        // 새로운 after 상태를 만든다!
+        return {
+          ...item,
+          optionList: [...item.optionList, newOption],
+        };
+      })
+    );
   };
 
-  const onDelete = (targetId) => {
-    console.log(`${targetId}가 삭제되었습니다.`);
-    const newOptionList = optionList.filter((it) => it.id !== targetId);
-    setOptionList(newOptionList);
+  const onDelete = (setId, itemId) => {
+    console.log(`${setId}에 있는 ${itemId}가 삭제되었습니다.`);
+    setOptionSetList((prev) =>
+      prev.map((item) => {
+        if (item.id !== setId) return item;
+
+        return {
+          ...item,
+          optionList: item.optionList.filter((option) => option.id !== itemId),
+        };
+      })
+    );
+  };
+
+  const addOptionSet = () => {
+    const newOptionList = {
+      id: crypto.randomUUID(),
+      optionList: [],
+    };
+    setOptionSetList((prev) => [...prev, newOptionList]);
   };
 
   return (
     <SectionWrapper>
       <SectionHeader>상품 옵션</SectionHeader>
-      <div>
-        <OptionEditor onCreate={onCreate} />
-        <OptionList onDelete={onDelete} optionList={optionList} />
-      </div>
+      <button onClick={addOptionSet}> 옵션 세트 추가</button>
+
+      {optionSetList.map((it) => (
+        <OptionSet
+          key={it.id}
+          onDelete={onDelete}
+          onCreate={onCreate}
+          optionList={it}
+        />
+      ))}
     </SectionWrapper>
   );
 };

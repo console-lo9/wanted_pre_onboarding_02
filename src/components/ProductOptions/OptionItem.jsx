@@ -3,7 +3,7 @@ import style from "../ProductOptions/ProductOptions.module.css";
 import Input from "layout/Input";
 import PlusOption from "./PlusOption";
 
-const OptionItem = ({ onDelete, id }) => {
+const OptionItem = ({ onDelete, id, optionListId }) => {
   const [optionProduct, setOptionProduct] = useState([]);
 
   const addOptionProduct = () => {
@@ -64,7 +64,7 @@ const OptionItem = ({ onDelete, id }) => {
 
   return (
     <div className={style.optionContents}>
-      <button className={style.optionBtn} onClick={() => onDelete(id)}>
+      <button className={style.optionBtn} onClick={() => onDelete(optionListId, id)}>
         삭제
       </button>
       <Input

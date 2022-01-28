@@ -1,11 +1,18 @@
 import React, { useState } from "react";
 import OptionItem from "components/ProductOptions/OptionItem";
 
-const OptionList = ({ onDelete, optionList }) => {
+const OptionList = ({ onDelete, optionList, id }) => {
+  const optionListId = id;
+
   return (
     <div>
       {optionList.map((option, idx) => (
-        <OptionItem key={option.id} {...option} onDelete={onDelete} />
+        <OptionItem
+          key={option.id}
+          {...option}
+          optionListId={optionListId}
+          onDelete={onDelete}
+        />
       ))}
     </div>
   );
