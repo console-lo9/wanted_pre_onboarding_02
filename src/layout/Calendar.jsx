@@ -4,7 +4,7 @@ import LocalizationProvider from "@mui/lab/LocalizationProvider";
 import DesktopDateTimePicker from "@mui/lab/DesktopDateTimePicker";
 import { TextField } from "@mui/material";
 
-function Calendar({ setTime, disabled }) {
+function Calendar({ setTime, disabled, onClick }) {
   const [value, setValue] = useState();
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
