@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./ContentBodyTitle.module.css";
 
 const ContentBodyTitle = (props) => {

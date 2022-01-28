@@ -1,8 +1,11 @@
 .body {
-  padding: 10px;
-  margin: 0;
-  display: inline-flex;
+  display: flex;
 
   padding: 0;
   margin: 0;
+
+  border: none;
+  outline: 1px solid var(--maincolor-grey);
+
+  min-height: 100px;
 }

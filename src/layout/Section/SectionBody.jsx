@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./SectionBody.module.css";
 
 const SectionBody = (props) => {
