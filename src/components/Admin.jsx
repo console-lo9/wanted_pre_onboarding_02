@@ -6,6 +6,7 @@ import ProductInfo from "./ProductInfo";
 import ProductOptions from "./ProductOptions/ProductOptions";
 import ProductPeriodSetup from "./ProductPeriodSetup";
 import ProductThumbnail from "./ProductThumbnail";
+import AddImage from "./ProductThumbnail/AddImage";
 
 const MockData = [
   { id: "m1", menu: "기본설정" },

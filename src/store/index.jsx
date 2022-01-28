@@ -18,17 +18,14 @@ const setPeriodSlice = createSlice({
   },
 });
 
-const uploadInitialState = {
-  introduce: { imgArr: [{ id: 1, name: "test" }] },
-  recommend: { img: "" },
-};
+const uploadInitialState = { item: [{ id: "", name: "" }] };
 
 const imgUploadSlice = createSlice({
   name: "upload",
   initialState: uploadInitialState,
   reducers: {
     introduce(state, action) {
-      state.introduce = action.payload;
+      state.introduce = [...state.introduce, action.payload];
     },
     recommend(state, action) {
       state.recommend = action.payload;
