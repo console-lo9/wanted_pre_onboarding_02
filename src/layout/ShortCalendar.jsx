@@ -16,7 +16,7 @@ function ShortCalendar({ disabled, endTime }) {
         onChange={(newValue) => {
           setValue(newValue);
           if (endTime && endTime > newValue.getTime()) {
-            alert("주문 시간 이후로 출고일을 지정해 주세요");
+            window.confirm("주문 시간 이후로 출고일을 지정해 주세요");
             setValue(value);
           }
         }}
