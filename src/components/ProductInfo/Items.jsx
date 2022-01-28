@@ -1,7 +1,8 @@
-import { Input } from "@mui/material";
-import React, { useState } from "react";
+import AddButton from "layout/Button";
+import React, { useEffect, useState } from "react";
 import Item from "./Item";
 import styles from "./Items.module.css";
+import NewItem from "./NewItem";
 
 function Items() {
   const [labelArr, setLabelArr] = useState([
@@ -19,13 +20,39 @@ function Items() {
     "식품 유형을 입력해 주세요. (ex) 포장육",
   ]);
 
-  const [id, setId] = useState(0);
+  const [newItemTitle, setNewItemTitle] = useState("");
+  const [newItemContent, setNewItemContent] = useState("");
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    e.stopImmediatePropagation();
+    setLabelArr((state) => [...state, newItemTitle]);
+    setPlaceHolderArr((state) => [...state, newItemContent]);
+    setNewItemTitle("");
+    setNewItemContent("");
+  };
+  useEffect(() => {
+    setNewItemTitle("");
+    setNewItemContent("");
+  }, []);
   return (
     <div className={styles.flexBox}>
       {labelArr.map((label, i) => (
-        <Item label={label} id={`input-${i}`} placeholder={placeHolderArr[i]} />
+        <Item
+          label={label}
+          id={`input-${i}`}
+          placeholder={placeHolderArr[i]}
+          key={i}
+        />
       ))}
+      <NewItem
+        newItemTitle={newItemTitle}
+        newItemContent={newItemContent}
+        setNewItemTitle={setNewItemTitle}
+        setNewItemContent={setNewItemContent}
+        handleSubmit={(e) => handleSubmit(e)}
+      />
     </div>
   );
 }
