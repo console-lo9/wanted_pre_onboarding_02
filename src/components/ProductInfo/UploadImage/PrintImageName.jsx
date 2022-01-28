@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext } from "react";
 import { ImageContext } from "components/ProductInfo/UploadImage/Contexts";
 import Button from "layout/Button";
 

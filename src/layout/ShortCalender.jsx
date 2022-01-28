@@ -1,21 +1,17 @@
 import React, { useState } from "react";
 import AdapterDateFns from "@mui/lab/AdapterDateFns";
 import LocalizationProvider from "@mui/lab/LocalizationProvider";
-import DesktopDateTimePicker from "@mui/lab/DesktopDateTimePicker";
+import DesktopDatePicker from "@mui/lab/DesktopDatePicker";
 import { TextField } from "@mui/material";
 
-function Calendar({ setTime, disabled }) {
+function ShortCalender() {
   const [value, setValue] = useState();
   return (
     <LocalizationProvider dateAdapter={AdapterDateFns}>
-      <DesktopDateTimePicker
-        disabled={disabled || false}
+      <DesktopDatePicker
         value={value}
-        inputFormat={"yyyy.MM.dd hh:mm"}
-        mask={"____.__.__ __:__"}
         onChange={(newValue) => {
           setValue(newValue);
-          setTime && setTime(newValue.getTime());
         }}
         renderInput={(params) => <TextField {...params} />}
       />
@@ -23,4 +19,4 @@ function Calendar({ setTime, disabled }) {
   );
 }
 
-export default Calendar;
+export default ShortCalender;

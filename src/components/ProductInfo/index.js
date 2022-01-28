@@ -9,12 +9,15 @@ import TotalAmount from "components/ProductInfo/TotalAmount";
 import SectionWrapper from "layout/Section/SectionWrapper";
 import SectionHeader from "layout/Section/SectionHeader";
 
+import { ItemProvider } from "components/ProductInfo/FilterTag/Contexts";
 const ProductInfo = () => {
   return (
     <SectionWrapper>
       <SectionHeader>상품 기본 정보</SectionHeader>
       <Category />
-      <FilterTag />
+      <ItemProvider>
+        <FilterTag />
+      </ItemProvider>
       <ProductName />
       <IntroInfo />
       <Thumbnail />
