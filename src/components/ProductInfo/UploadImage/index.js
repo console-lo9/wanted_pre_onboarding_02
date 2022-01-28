@@ -1,13 +1,14 @@
 import AttachImage from "./AttachImage";
-
-import { ImageProvider } from "components/ProductInfo/UploadImage/Contexts";
+import UploadImages from "components/UploadImages";
 import PrintImageName from "./PrintImageName";
+import { ImageProvider } from "components/ProductInfo/UploadImage/Contexts";
 
 const UploadImage = ({ multiple }) => {
   return (
     <ImageProvider>
-      <AttachImage multiple={multiple} />
-      <PrintImageName />
+      <UploadImages multiple={multiple} />
+      {/* <AttachImage multiple={multiple} />
+      <PrintImageName /> */}
     </ImageProvider>
   );
 };

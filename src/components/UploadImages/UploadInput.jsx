@@ -6,10 +6,11 @@ const UploadInput = (props) => {
       <label onClick={props.onClick}>{props.children}</label>
       <input
         type="file"
+        accept="image/*"
         style={{ display: "none" }}
         onChange={props.onChange}
         ref={props.uploadRef}
-        multiple="multiple"
+        multiple={props.multiple}
       />
     </div>
   );

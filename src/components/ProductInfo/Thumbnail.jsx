@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import UploadImage from "./UploadImage";
+import UploadImages from "components/UploadImages";
 
 import styles from "components/ProductInfo/ProductInfo.module.css";
 
@@ -15,7 +15,7 @@ const Thumbnail = () => {
     <SectionBody className={styles.container}>
       <ContentBodyTitle>썸네일</ContentBodyTitle>
       <SectionBodyContent className={styles.box}>
-        <UploadImage multiple={false} />
+        <UploadImages multiple={false} />
       </SectionBodyContent>
     </SectionBody>
   );

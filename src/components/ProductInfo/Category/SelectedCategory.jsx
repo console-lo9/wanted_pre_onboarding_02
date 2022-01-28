@@ -3,6 +3,7 @@ import React, { useContext, useEffect } from "react";
 import { CategoryContext } from "components/ProductInfo/Category/Contexts";
 
 import Button from "layout/Button";
+import styles from "./SelectedCategory.module.css";
 const SelectedCategory = () => {
   const { checkedItems, checkedItemHandler } = useContext(CategoryContext);
 
@@ -15,8 +16,8 @@ const SelectedCategory = () => {
       {checkedItems.length ? (
         checkedItems.map((cate, index) => {
           return (
-            <div key={index}>
-              {cate}{" "}
+            <div className={styles.selectedContainer} key={index}>
+              <p>{cate} </p>
               <Button onClick={onClick} value={cate} tag="xBadge">
                 ×
               </Button>

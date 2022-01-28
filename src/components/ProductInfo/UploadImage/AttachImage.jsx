@@ -30,6 +30,7 @@ const AttachImage = ({ multiple }) => {
       </Button>
       <input
         type="file"
+        accept="image/*"
         onChange={onLoadFile}
         ref={fileInput}
         multiple={multiple}
