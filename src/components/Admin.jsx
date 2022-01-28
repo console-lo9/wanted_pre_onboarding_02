@@ -3,10 +3,9 @@ import React from "react";
 import styles from "./Admin.module.css";
 import { ProductDelivery } from "./ProductDelivery";
 import ProductInfo from "./ProductInfo";
-import ProductOptions from "./ProductOptions/ProductOptions";
+import ProductOptions from "components/ProductOptions/index";
 import ProductPeriodSetup from "./ProductPeriodSetup";
 import ProductThumbnail from "./ProductThumbnail";
-import AddImage from "./ProductThumbnail/AddImage";
 
 const MockData = [
   { id: "m1", menu: "기본설정" },
