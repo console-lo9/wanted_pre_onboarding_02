@@ -11,7 +11,7 @@ const OptionEditor = ({ onCreate }) => {
   return (
     <div className={style.optionContainer}>
       <div className={style.imgContainer}>
-        <div>이미지 첨부</div>
+        <button>이미지 첨부</button>
       </div>
       <button onClick={handleCreate}> + 옵션 추가</button>
     </div>

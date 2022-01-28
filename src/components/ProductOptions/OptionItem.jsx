@@ -28,12 +28,34 @@ const OptionItem = ({ onDelete, id }) => {
     stock: 0,
   });
 
+  //validation
+  const isNumber = (value) => {
+    const regex = /[0-9]/g;
+    return regex.test(value);
+  };
+
   const handleChangeState = (e) => {
     setOption({
       ...option,
       [e.target.name]: e.target.value,
     });
     console.log(option);
+  };
+
+  const handleNumberChangeState = (e) => {
+    if (e.nativeEvent.data && isNumber(e.nativeEvent.data)) {
+      setOption({
+        ...option,
+        [e.target.name]: e.target.value,
+      });
+    } else if (e.nativeEvent.data === null) {
+      setOption({
+        ...option,
+        [e.target.name]: e.target.value,
+      });
+    }
+    e.preventDefault();
+    return null;
   };
 
   const salesPercent = Math.floor(
@@ -58,7 +80,7 @@ const OptionItem = ({ onDelete, id }) => {
           placeholder={"상품 정상가 (필수)"}
           name="price"
           value={option.price}
-          onChange={handleChangeState}
+          onChange={handleNumberChangeState}
         />
         <p className={style.optionLabel}> 원</p>
         {salesPercent > 0 && salesPercent !== 100 ? (
@@ -71,7 +93,7 @@ const OptionItem = ({ onDelete, id }) => {
           placeholder={"상품 판매가 (필수)"}
           name="salePrice"
           value={option.salePrice}
-          onChange={handleChangeState}
+          onChange={handleNumberChangeState}
         />
         <p className={style.optionLabel}>원</p>
         <Input
@@ -79,7 +101,7 @@ const OptionItem = ({ onDelete, id }) => {
           placeholder={"재고(필수)"}
           name="stock"
           value={option.stock}
-          onChange={handleChangeState}
+          onChange={handleNumberChangeState}
         />
         <p className={style.optionLabel}>개</p>
         <select>
