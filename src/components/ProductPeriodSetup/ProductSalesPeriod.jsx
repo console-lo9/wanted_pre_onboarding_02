@@ -16,7 +16,7 @@ const userSelectionMockData = [
 
 const ProductSalsePeriod = () => {
   const dispatch = useDispatch();
-  const changedRadio = useSelector((state) => state.sales.radio);
+  const changedRadio = useSelector((state) => state.period.sales.radio);
 
   const checkSelectionHandler = (e) => {
     dispatch(setPeriodActions.salesRadio(e.target.value));

@@ -7,7 +7,13 @@ const UploadInput = (props) => {
       <label htmlFor="upload-input" onClick={props.onClick}>
         {props.children}
       </label>
-      <input style={{ display: "none" }} id="upload-input" />
+      <input
+        type="file"
+        style={{ display: "none" }}
+        id="upload-input"
+        ref={props.useRef}
+        onChange={props.onChange}
+      />
     </div>
   );
 };

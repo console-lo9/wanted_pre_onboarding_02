@@ -14,7 +14,7 @@ import stylse from "./ProductExposurePeriod.module.css";
 const ProductExposurePeriod = () => {
   const dispatch = useDispatch();
 
-  const checkedRadio = useSelector((state) => state.exposure.radio);
+  const checkedRadio = useSelector((state) => state.period.exposure.radio);
 
   const checkSelectionHandler = (e) => {
     dispatch(setPeriodActions.exposureRadio(e.target.value));
