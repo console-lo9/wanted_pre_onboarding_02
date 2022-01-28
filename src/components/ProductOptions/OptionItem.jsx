@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "../ProductOptions/ProductOptions.module.css";
 import Input from "layout/Input";
 import PlusOption from "./PlusOption";
 
-const OptionItem = ({ onDelete, id, addOptionProduct, optionProduct }) => {
-  const deleteOption = (id) => {
-    console.log("deleteOption" + id);
+const OptionItem = ({ onDelete, id }) => {
+  const [optionProduct, setOptionProduct] = useState([]);
+
+  const addOptionProduct = () => {
+    const newOptionProduct = {
+      id: crypto.randomUUID(),
+    };
+    setOptionProduct([...optionProduct, newOptionProduct]);
   };
+
+  const deleteOption = (targetId) => {
+    console.log(`${id}가 삭제되었습니다.`);
+    console.log(targetId);
+    const newOptionProduct = optionProduct.filter((it) => it.id !== targetId);
+    setOptionProduct(newOptionProduct);
+  };
+
   return (
     <div className={style.optionContents}>
       <button className={style.optionBtn} onClick={() => onDelete(id)}>
@@ -42,11 +55,11 @@ const OptionItem = ({ onDelete, id, addOptionProduct, optionProduct }) => {
         </select>
       </div>
       <div>
-        {optionProduct.map((it, id) => (
-          <PlusOption key={id} deleteOption={deleteOption} />
+        {optionProduct.map((it, idx) => (
+          <PlusOption key={id} deleteOption={() => deleteOption(it.id)} />
         ))}
       </div>
-      <button onClick={() => addOptionProduct(id)}>추가 옵션 상품 추가</button>
+      <button onClick={addOptionProduct}>추가 옵션 상품 추가</button>
     </div>
   );
 };

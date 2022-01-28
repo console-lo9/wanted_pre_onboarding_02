@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import SectionWrapper from "layout/Section/SectionWrapper";
 import SectionHeader from "layout/Section/SectionHeader";
 import OptionEditor from "components/ProductOptions/OptionEditor";
@@ -7,13 +7,11 @@ import uuid from "utils/uuid";
 
 const ProductOptionIdx = () => {
   const [optionList, setOptionList] = useState([]);
-  const dataId = useRef(0);
 
   const onCreate = () => {
     const newOptionItem = {
       id: crypto.randomUUID(),
     };
-    dataId.current += 1;
     setOptionList([...optionList, newOptionItem]);
   };
 
@@ -22,6 +20,7 @@ const ProductOptionIdx = () => {
     const newOptionList = optionList.filter((it) => it.id !== targetId);
     setOptionList(newOptionList);
   };
+
   return (
     <SectionWrapper>
       <SectionHeader>상품 옵션</SectionHeader>
