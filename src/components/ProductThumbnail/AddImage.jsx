@@ -27,7 +27,6 @@ const AddImage = () => {
 
   const removeHandler = (e) => {
     const buttonId = e.target.id;
-    console.log(uploadedImg.find((data) => data.id == buttonId));
     setUploadedImg(uploadedImg.filter((data) => data.id != buttonId));
   };
 
