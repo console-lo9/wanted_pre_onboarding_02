@@ -17,7 +17,6 @@ const ProductName = () => {
       ...inputs,
       [name]: value,
     });
-    console.log(inputs);
   };
   const { product } = inputs;
 

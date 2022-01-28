@@ -9,7 +9,6 @@ const IntroInfo = () => {
   const [info, setInfo] = useState("");
   const onChange = (e) => {
     setInfo(e.target.value);
-    console.log(info);
   };
   return (
     <SectionBody className={styles.container}>
