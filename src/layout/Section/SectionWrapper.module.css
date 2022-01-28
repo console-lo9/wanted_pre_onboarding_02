@@ -1,6 +1,8 @@
 .wrapper {
-  width: 80%;
   display: flex;
-  border: 2px solid gainsboro;
   flex-direction: column;
+  border: none;
+  outline: 2px solid var(--maincolor-grey);
+  flex-direction: column;
+  margin: 30px 20px;
 }

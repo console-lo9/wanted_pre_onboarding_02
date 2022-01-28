@@ -1,0 +1,13 @@
+.upload label {
+  font-weight: 500;
+  border: none;
+  padding: 8px 20px;
+  margin: 0 5px;
+
+  background: transparent;
+  outline: 2px solid rgb(53, 47, 110);
+  border-radius: 0px;
+  cursor: pointer;
+
+  display: flex;
+}

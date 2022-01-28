@@ -1,7 +1,7 @@
 import PreOrderDelivery from "./PreOrderDelivery";
 import ProductDepartureDate from "./ProductDepartureDate";
 import Visiting from "./Visiting";
-import styles from "./index.module.css";
+
 import SectionWrapper from "layout/Section/SectionWrapper";
 import SectionHeader from "layout/Section/SectionHeader";
 import { useState } from "react";

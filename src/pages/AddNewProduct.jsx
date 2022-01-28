@@ -1,16 +1,8 @@
 import React from "react";
+import Admin from "components/Admin";
 
-import { ProductDelivery } from "components/ProductDelivery";
-import { ProductBenefit } from "components/ProductBenefit";
-import { Etc } from "components/Etc";
 function ProductRegistration() {
-  return (
-    <div>
-      <ProductDelivery />
-      <ProductBenefit />
-      <Etc />
-    </div>
-  );
+  return <Admin />;
 }
 
 export default ProductRegistration;
