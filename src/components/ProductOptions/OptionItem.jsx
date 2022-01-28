@@ -1,8 +1,12 @@
 import React from "react";
 import style from "../ProductOptions/ProductOptions.module.css";
 import Input from "layout/Input";
+import PlusOption from "./PlusOption";
 
-const OptionItem = ({ onDelete, id }) => {
+const OptionItem = ({ onDelete, id, addOptionProduct, optionProduct }) => {
+  const deleteOption = (id) => {
+    console.log("deleteOption" + id);
+  };
   return (
     <div className={style.optionContents}>
       <button className={style.optionBtn} onClick={() => onDelete(id)}>
@@ -34,8 +38,15 @@ const OptionItem = ({ onDelete, id }) => {
         <p className={style.optionLabel}>개</p>
         <select>
           <option>비과세</option>
+          <option>과세</option>
         </select>
       </div>
+      <div>
+        {optionProduct.map((it, id) => (
+          <PlusOption key={id} deleteOption={deleteOption} />
+        ))}
+      </div>
+      <button onClick={() => addOptionProduct(id)}>추가 옵션 상품 추가</button>
     </div>
   );
 };

@@ -3,6 +3,7 @@ import SectionWrapper from "layout/Section/SectionWrapper";
 import SectionHeader from "layout/Section/SectionHeader";
 import OptionEditor from "components/ProductOptions/OptionEditor";
 import OptionList from "components/ProductOptions/OptionList";
+import uuid from "utils/uuid";
 
 const ProductOptionIdx = () => {
   const [optionList, setOptionList] = useState([]);
@@ -10,7 +11,7 @@ const ProductOptionIdx = () => {
 
   const onCreate = () => {
     const newOptionItem = {
-      id: dataId.current,
+      id: crypto.randomUUID(),
     };
     dataId.current += 1;
     setOptionList([...optionList, newOptionItem]);

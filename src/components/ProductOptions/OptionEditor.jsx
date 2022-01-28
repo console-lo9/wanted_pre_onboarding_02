@@ -67,6 +67,7 @@ const OptionEditor = ({ onCreate }) => {
             <option>과세</option>
           </select>
         </div>
+        <button>추가 옵션 상품 추가</button>
       </div>
       <button onClick={handleCreate}> + 옵션 추가</button>
     </div>
