@@ -27,3 +27,9 @@
   background: rgb(239, 238, 243);
   outline: 2px solid rgb(53, 47, 110);
 }
+
+.addIMG {
+  background: transparent;
+  outline: 2px solid rgb(53, 47, 110);
+  border-radius: 0px;
+}
