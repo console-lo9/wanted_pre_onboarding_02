@@ -8,6 +8,7 @@ const Input = (props) => {
     value,
     onChange,
     className = "",
+    required = true,
   } = props;
   return (
     <input
@@ -17,6 +18,7 @@ const Input = (props) => {
       value={value}
       onChange={onChange}
       className={className}
+      required={required}
     />
   );
 };
