@@ -6,24 +6,24 @@
   margin: 0 5px;
 }
 .save {
-  background: rgb(53, 47, 110);
+  background: var(--maincolor-deepblue);
   color: #fff;
-  outline: 2px solid rgb(53, 47, 110);
+  outline: 2px solid var(--maincolor-deepblue);
 }
 
 .delete {
   background: transparent;
-  color: rgb(220, 44, 44);
+  color: var(--maincolor-red);
 
-  outline: 2px solid rgb(220, 44, 44);
+  outline: 2px solid var(--maincolor-red);
 }
 
 .add {
   background: transparent;
-  outline: 2px solid rgb(53, 47, 110);
+  outline: 2px solid var(--maincolor-deepblue);
 }
 
 .category {
-  background: rgb(239, 238, 243);
-  outline: 2px solid rgb(53, 47, 110);
+  background: var(--maincolor-lightgrey);
+  outline: 2px solid var(--maincolor-deepblue);
 }
