@@ -18,7 +18,6 @@ const ProductOptionIdx = () => {
     setOptionSetList((prev) =>
       prev.map((item) => {
         if (item.id !== targetId) return item; // 원래 아이템을 그대로 둔다!
-
         // 새로운 after 상태를 만든다!
         return {
           ...item,
@@ -30,10 +29,10 @@ const ProductOptionIdx = () => {
 
   const onDelete = (setId, itemId) => {
     console.log(`${setId}에 있는 ${itemId}가 삭제되었습니다.`);
+
     setOptionSetList((prev) =>
       prev.map((item) => {
         if (item.id !== setId) return item;
-
         return {
           ...item,
           optionList: item.optionList.filter((option) => option.id !== itemId),
@@ -50,6 +49,11 @@ const ProductOptionIdx = () => {
     setOptionSetList((prev) => [...prev, newOptionList]);
   };
 
+  const deleteOptionSet = (targetId) => {
+    const newOptionSetList = optionSetList.filter((it) => it.id !== targetId);
+    setOptionSetList(newOptionSetList);
+  };
+
   return (
     <SectionWrapper>
       <SectionHeader>상품 옵션</SectionHeader>
@@ -58,9 +62,11 @@ const ProductOptionIdx = () => {
       {optionSetList.map((it) => (
         <OptionSet
           key={it.id}
+          id={it.id}
           onDelete={onDelete}
           onCreate={onCreate}
           optionList={it}
+          deleteOptionSet={deleteOptionSet}
         />
       ))}
     </SectionWrapper>

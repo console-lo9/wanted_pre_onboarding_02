@@ -8,10 +8,11 @@ const OptionEditor = ({ onCreate, optionListId }) => {
   const handleCreate = () => {
     const newOption = {
       id: crypto.randomUUID(),
-      value: ''
+      value: "",
     };
-    onCreate(optionListId, newOption);
     alert("추가 성공");
+    onCreate(optionListId, newOption);
+    console.log(optionListId, newOption);
   };
 
   return (
