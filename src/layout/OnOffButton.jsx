@@ -8,8 +8,9 @@ function OnOffButton(props) {
         id={props.id}
         type="checkbox"
         className={styles.btn}
+        onChange={props.onChange}
         checked={props.checked}
-        onChange={props.onClick}
+        readOnly
       />
       <label htmlFor={props.id} className={styles.label}>
         <span></span>
