@@ -7,11 +7,14 @@ import RepresentImg from "components/ProductInfo/RepresentImg";
 import Thumbnail from "components/ProductInfo/Thumbnail";
 import TotalAmount from "components/ProductInfo/TotalAmount";
 
+import { ItemProvider } from "components/ProductInfo/FilterTag/Contexts";
 const ProductInfo = () => {
   return (
     <div>
       <Category />
-      <FilterTag />
+      <ItemProvider>
+        <FilterTag />
+      </ItemProvider>
       <ProductName />
       <IntroInfo />
       <Thumbnail />
