@@ -55,6 +55,7 @@ const OptionItem = ({ onDelete, id, optionListId }) => {
       });
     }
     e.preventDefault();
+    console.log(option);
     return null;
   };
 
@@ -64,7 +65,10 @@ const OptionItem = ({ onDelete, id, optionListId }) => {
 
   return (
     <div className={style.optionContents}>
-      <button className={style.optionBtn} onClick={() => onDelete(optionListId, id)}>
+      <button
+        className={style.optionBtn}
+        onClick={() => onDelete(optionListId, id)}
+      >
         삭제
       </button>
       <Input
