@@ -4,8 +4,8 @@ import OptionItem from "components/ProductOptions/OptionItem";
 const OptionList = ({ onDelete, optionList }) => {
   return (
     <div>
-      {optionList.map((option, id) => (
-        <OptionItem key={id} {...option} onDelete={onDelete} />
+      {optionList.map((option, idx) => (
+        <OptionItem key={option.id} {...option} onDelete={onDelete} />
       ))}
     </div>
   );
