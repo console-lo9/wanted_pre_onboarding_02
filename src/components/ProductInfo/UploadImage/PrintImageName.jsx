@@ -1,22 +1,19 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { ImageContext } from "components/ProductInfo/UploadImage/Contexts";
-const PrintImageName = ({ multiple }) => {
+const PrintImageName = () => {
   const { images, setImages } = useContext(ImageContext);
-  const [singleImage, setSingleImage] = useState("");
-  useEffect(() => {
-    if (images.length && !multiple) {
-      setSingleImage(images[images.length - 1].name);
-    }
-  }, [images]);
+
   return (
     <div>
-      {images.length && multiple ? (
+      {images &&
         images.map((img, index) => {
-          return <p key={index}>{img.name}</p>;
-        })
-      ) : (
-        <p>{singleImage}</p>
-      )}
+          return (
+            <div key={index}>
+              <p>{img.name}</p>
+              <button>X</button>
+            </div>
+          );
+        })}
     </div>
   );
 };

@@ -6,7 +6,11 @@ const AttachImage = ({ multiple }) => {
   const { images, setImages } = useContext(ImageContext);
   const fileInput = useRef();
   const onLoadFile = (e) => {
-    setImages([...images, e.target.files[0]]);
+    if (multiple) {
+      setImages([...images, e.target.files[0]]);
+    } else {
+      setImages([e.target.files[0]]);
+    }
   };
   const handleClick = () => {
     fileInput.current.click();
