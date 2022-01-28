@@ -10,6 +10,8 @@ const AddButton = (props) => {
       type={`${props.type}`}
       onClick={props.onClick}
       onSubmit={props.onSubmit}
+      id={props.id}
+      value={props.value}
     >
       {props.children}
     </button>

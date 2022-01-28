@@ -5,7 +5,8 @@ import { Etc } from "./Etc";
 import { NoticeProductInfo } from "./NoticeProductInfo";
 import { ProductBenefit } from "./ProductBenefit";
 import { ProductDelivery } from "./ProductDelivery";
-import { ProductInfo } from "./ProductInfo";
+import ProductInfo from "./ProductInfo";
+import ProductOptions from "components/ProductOptions/index";
 import ProductPeriodSetup from "./ProductPeriodSetup";
 import ProductThumbnail from "./ProductThumbnail";
 
@@ -85,8 +86,9 @@ const Admin = () => {
           <ProductPeriodSetup />
           <ProductInfo />
           <NoticeProductInfo />
-          <ProductDelivery />
+          <ProductOptions />
           <ProductThumbnail />
+          <ProductDelivery />
           <ProductBenefit />
           <Etc />
         </div>
