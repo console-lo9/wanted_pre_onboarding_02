@@ -6,7 +6,9 @@ function NewItem({
   setNewItemContent,
   newItemTitle,
   newItemContent,
-  handleSubmit,
+  setLabelArr,
+  setPlaceHolderArr,
+  //   handleSubmit,
 }) {
   const handleChange = (e) => {
     setNewItemTitle(e.target.value);
@@ -14,20 +16,25 @@ function NewItem({
   const handleChange2 = (e) => {
     setNewItemContent(e.target.value);
   };
-  //   const handleSubmit = (e) => {
-  //     e.preventDefault();
-  //     console.log(newItemTitle);
-  //   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLabelArr((state) => [...state, newItemTitle]);
+    setPlaceHolderArr((state) => [...state, newItemContent]);
+    setNewItemTitle("");
+    setNewItemContent("");
+  };
   return (
     <div>
       <form>
         <input
+          type="text"
           placeholder="항목 제목 자유 입력"
           onChange={handleChange}
           value={newItemTitle}
           required
         />
         <input
+          type="text"
           placeholder="내용을 입력해주세요."
           onChange={handleChange2}
           value={newItemContent}

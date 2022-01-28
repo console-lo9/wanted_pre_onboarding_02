@@ -23,15 +23,13 @@ function Items() {
   const [newItemTitle, setNewItemTitle] = useState("");
   const [newItemContent, setNewItemContent] = useState("");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-    e.stopImmediatePropagation();
-    setLabelArr((state) => [...state, newItemTitle]);
-    setPlaceHolderArr((state) => [...state, newItemContent]);
-    setNewItemTitle("");
-    setNewItemContent("");
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   setLabelArr((state) => [...state, newItemTitle]);
+  //   setPlaceHolderArr((state) => [...state, newItemContent]);
+  //   setNewItemTitle("");
+  //   setNewItemContent("");
+  // };
   useEffect(() => {
     setNewItemTitle("");
     setNewItemContent("");
@@ -51,7 +49,9 @@ function Items() {
         newItemContent={newItemContent}
         setNewItemTitle={setNewItemTitle}
         setNewItemContent={setNewItemContent}
-        handleSubmit={(e) => handleSubmit(e)}
+        setLabelArr={setLabelArr}
+        setPlaceHolderArr={setPlaceHolderArr}
+        // handleSubmit={handleSubmit}
       />
     </div>
   );
