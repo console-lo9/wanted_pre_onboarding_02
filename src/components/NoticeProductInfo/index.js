@@ -1,9 +1,9 @@
-import Category from "./Category";
+import Notice from "./Notice";
 
-export const ProductInfo = () => {
+export const NoticeProductInfo = () => {
   return (
     <div>
-      <Category />
+      <Notice />
     </div>
   );
 };
