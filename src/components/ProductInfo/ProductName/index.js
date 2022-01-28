@@ -11,7 +11,7 @@ const ProductName = () => {
     product: "",
     code: "",
   });
-  const onChange = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setInputs({
       ...inputs,
@@ -26,7 +26,12 @@ const ProductName = () => {
         <p>상품명</p>
       </ContentBodyTitle>
       <SectionBodyContent>
-        <input type="text" name="product" value={product} onChange={onChange} />
+        <input
+          type="text"
+          name="product"
+          value={product}
+          onChange={handleChange}
+        />
       </SectionBodyContent>
       <ProductCode product={product} />
     </SectionBody>
