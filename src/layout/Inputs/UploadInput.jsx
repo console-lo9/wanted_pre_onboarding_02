@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import styles from "./UploadInput.module.css";
 
 const UploadInput = (props) => {
