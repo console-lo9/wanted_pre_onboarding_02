@@ -1,0 +1,5 @@
+.wrapper {
+  width: 80%;
+  display: flexbox;
+  border: 2px solid gainsboro;
+}
