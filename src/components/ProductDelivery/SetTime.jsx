@@ -1,6 +1,7 @@
-import Calender from "layout/Calender";
-import ShortCalender from "layout/ShortCalender";
-import React from "react";
+
+import Calendar from "layout/Calendar";
+import ShortCalendar from "layout/ShortCalendar";
+import React, { Fragment, useState } from "react";
 import styles from "./SetTime.module.css";
 
 function SetTime({}) {
@@ -8,15 +9,15 @@ function SetTime({}) {
     <div className={styles.contain}>
       <div>
         <span>주문 시간</span>
-        <Calender />
+        <Calendar />
         <span>~</span>
-        <Calender />
+        <Calendar />
       </div>
       <div>
         <span>새벽 배송</span>
-        <ShortCalender />
+        <ShortCalendar />
         <span>일반 배송</span>
-        <ShortCalender />
+        <ShortCalendar />
       </div>
     </div>
   );
