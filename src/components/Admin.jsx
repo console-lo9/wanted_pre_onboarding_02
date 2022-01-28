@@ -12,7 +12,14 @@ const MockData = [
   {
     id: "m4",
     menu: "상품",
-    list: ["상품 리스트", "상품 재고 관리", "상품 등록"],
+    list: [
+      // { id: "상품 리스트" },
+      // { id: "상품 재고 관리" },
+      // { id: "상품 등록" },
+      "상품 리스트",
+      "상품 재고 관리",
+      "상품 등록",
+    ],
   },
   { id: "m5", menu: "주문" },
   { id: "m6", menu: "배송" },
@@ -39,7 +46,9 @@ const Admin = () => {
         </nav>
         <nav className={`${styles["nav-bottom"]}`}>
           <div>
-            <span>상품등록</span>
+            <span>
+              <b>상품등록</b>
+            </span>
             <span>ADM_PRODUCT_AD</span>
           </div>
         </nav>
