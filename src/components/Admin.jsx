@@ -1,7 +1,11 @@
 import Button from "layout/Button";
 import React from "react";
 import styles from "./Admin.module.css";
+import { Etc } from "./Etc";
+import { ProductBenefit } from "./ProductBenefit";
 import { ProductDelivery } from "./ProductDelivery";
+import ProductInfo from "./ProductInfo";
+import ProductOptions from "components/ProductOptions/index";
 import ProductPeriodSetup from "./ProductPeriodSetup";
 import ProductThumbnail from "./ProductThumbnail";
 
@@ -79,8 +83,12 @@ const Admin = () => {
             </Button>
           </div>
           <ProductPeriodSetup />
-          <ProductDelivery />
+          <ProductInfo />
+          <ProductOptions />
           <ProductThumbnail />
+          <ProductDelivery />
+          <ProductBenefit />
+          <Etc />
         </div>
       </section>
     </div>

@@ -5,7 +5,6 @@ import SectionBodyContent from "layout/Section/SectionBodyContent";
 import SectionHeader from "layout/Section/SectionHeader";
 import SectionWrapper from "layout/Section/SectionWrapper";
 import React, { useState } from "react";
-import styles from "./AccumulateMileage.module.css";
 
 const ID_4 = "id4";
 

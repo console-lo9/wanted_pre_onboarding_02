@@ -5,7 +5,6 @@ import SectionBodyContent from "layout/Section/SectionBodyContent";
 import SectionHeader from "layout/Section/SectionHeader";
 import SectionWrapper from "layout/Section/SectionWrapper";
 import React from "react";
-import styles from "./ProvideCard.module.css";
 
 const ID_5 = "id5";
 

@@ -2,8 +2,7 @@ import OnOffButton from "layout/OnOffButton";
 import ContentBodyTitle from "layout/Section/ContentBodyTitle";
 import SectionBody from "layout/Section/SectionBody";
 import SectionBodyContent from "layout/Section/SectionBodyContent";
-import React, { useEffect } from "react";
-import styles from "./Visiting.module.css";
+import React from "react";
 
 const ID_2 = "id2";
 

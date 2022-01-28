@@ -28,6 +28,12 @@
             ┃
             ┗ App.js, index.css, index.js
 
-3.  과제 구현 사항
+3.  과제 중점 사항
     1. 재사용 가능성
        1. 반복되는 값, 함수, 스타일 등을 따로 지정하여 생산성을 높임
+
+<img src="https://cdn.discordapp.com/attachments/935080254266019874/936439822262874133/2022-01-28_104910.jpg" alt='img'>
+
+<img src="https://cdn.discordapp.com/attachments/935080254266019874/936439822476779560/2022-01-28_105011.jpg" alt='img'>
+
+<img src="https://cdn.discordapp.com/attachments/935080254266019874/936439822669742160/2022-01-28_104945.jpg" alt="img">

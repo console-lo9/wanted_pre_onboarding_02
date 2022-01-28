@@ -18,9 +18,26 @@ const setPeriodSlice = createSlice({
   },
 });
 
+const uploadInitialState = { item: [{ id: "", name: "" }] };
+
+const imgUploadSlice = createSlice({
+  name: "upload",
+  initialState: uploadInitialState,
+  reducers: {
+    introduce(state, action) {
+      state.introduce = [...state.introduce, action.payload];
+    },
+    recommend(state, action) {
+      state.recommend = action.payload;
+    },
+  },
+});
+
 const store = configureStore({
-  reducer: setPeriodSlice.reducer,
+  reducer: { period: setPeriodSlice.reducer, upload: imgUploadSlice.reducer },
 });
 
 export const setPeriodActions = setPeriodSlice.actions;
+export const imgUploadActions = imgUploadSlice.actions;
+
 export default store;
