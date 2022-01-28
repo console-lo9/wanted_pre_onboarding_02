@@ -1,8 +1,8 @@
 import React, { useContext, useRef } from "react";
 
 import { ImageContext } from "components/ProductInfo/UploadImage/Contexts";
-import UploadInput from "layout/Inputs/UploadInput";
 
+import Button from "layout/Button";
 const AttachImage = ({ multiple }) => {
   const { images, setImages } = useContext(ImageContext);
   const fileInput = useRef();
@@ -13,6 +13,7 @@ const AttachImage = ({ multiple }) => {
         return files.push(item.name);
       });
       setImages(images.concat(files));
+
       e.target.value = "";
     } else {
       setImages([e.target.files[0].name]);
@@ -24,7 +25,9 @@ const AttachImage = ({ multiple }) => {
   };
   return (
     <div>
-      <UploadInput onClick={handleClick}>+ 이미지 첨부</UploadInput>
+      <Button tag="addIMG" onClick={handleClick}>
+        + 이미지 첨부
+      </Button>
       <input
         type="file"
         onChange={onLoadFile}

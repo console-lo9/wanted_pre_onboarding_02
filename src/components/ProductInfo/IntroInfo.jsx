@@ -7,15 +7,14 @@ import SectionBody from "layout/Section/SectionBody";
 import SectionBodyContent from "layout/Section/SectionBodyContent";
 const IntroInfo = () => {
   const [info, setInfo] = useState("");
-  const onChange = (e) => {
+  const handleChange = (e) => {
     setInfo(e.target.value);
-    console.log(info);
   };
   return (
     <SectionBody className={styles.container}>
       <ContentBodyTitle>상품 구성 소개 정보</ContentBodyTitle>
       <SectionBodyContent>
-        <input type="text" name="info" value={info} onChange={onChange} />
+        <input type="text" name="info" value={info} onChange={handleChange} />
       </SectionBodyContent>
     </SectionBody>
   );
