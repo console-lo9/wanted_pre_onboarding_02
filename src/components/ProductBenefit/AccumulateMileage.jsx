@@ -12,7 +12,7 @@ const ID_4 = "id4";
 function AccumulateMileage() {
   const [checked, setChecked] = useState(true);
 
-  const onClickHandler = () => {
+  const handleChange = () => {
     setChecked((state) => !state);
   };
 
@@ -22,7 +22,7 @@ function AccumulateMileage() {
       <SectionBody>
         <ContentBodyTitle children="마일리지 적립"></ContentBodyTitle>
         <SectionBodyContent>
-          <OnOffButton id={ID_4} checked={checked} onClick={onClickHandler} />
+          <OnOffButton id={ID_4} checked={checked} onChange={handleChange} />
         </SectionBodyContent>
       </SectionBody>
     </SectionWrapper>
