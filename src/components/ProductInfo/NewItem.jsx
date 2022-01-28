@@ -7,6 +7,7 @@ function NewItem({
   newItemTitle,
   newItemContent,
   order,
+  handleDelete,
 }) {
   const handleChange = (e) => {
     setNewItemTitle(e.target.value);
@@ -14,6 +15,7 @@ function NewItem({
   const handleChange2 = (e) => {
     setNewItemContent(e.target.value);
   };
+
   return (
     <div>
       <form id={`form-${order}`}>
@@ -31,7 +33,7 @@ function NewItem({
           value={newItemContent}
           required
         />
-        <button>삭제</button>
+        <button onClick={handleDelete}>삭제</button>
       </form>
     </div>
   );

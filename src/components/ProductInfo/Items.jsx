@@ -4,7 +4,7 @@ import Item from "./Item";
 import styles from "./Items.module.css";
 import NewItem from "./NewItem";
 
-function Items({ order }) {
+function Items({ order, name, handleDeleteItemBox }) {
   const [labelArr, setLabelArr] = useState([
     "제품명 / 중량",
     "원산지 / 원재료 함량",
@@ -30,19 +30,34 @@ function Items({ order }) {
     setNewItemTitle("");
     setNewItemContent("");
   };
+  const handleDelete = (e) => {
+    e.preventDefault();
+    const targetI = Number(e.target.name);
+    if (targetI >= 5) {
+      setLabelArr((arr) => arr.filter((item, i) => i !== targetI));
+    } else {
+      setNewItemTitle("");
+      setNewItemContent("");
+    }
+  };
   useEffect(() => {
     setNewItemTitle("");
     setNewItemContent("");
   }, []);
   return (
-    <div className={styles.flexBox}>
+    <div className={styles.flexBox} name={name}>
       <div>정보고시 {order}</div>
+      <button name={name} onClick={handleDeleteItemBox}>
+        삭제
+      </button>
       {labelArr.map((label, i) => (
         <Item
           label={label}
           id={`input-${i}`}
           placeholder={placeHolderArr[i]}
           key={i}
+          name={i}
+          handleDelete={handleDelete}
         />
       ))}
       <NewItem
@@ -51,6 +66,7 @@ function Items({ order }) {
         setNewItemTitle={setNewItemTitle}
         setNewItemContent={setNewItemContent}
         order={order}
+        handleDelete={handleDelete}
       />
       <button
         children="+ 항목 추가"
