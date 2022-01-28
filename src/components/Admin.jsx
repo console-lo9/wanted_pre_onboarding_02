@@ -85,8 +85,8 @@ const Admin = () => {
           <ProductPeriodSetup />
           <ProductInfo />
           <ProductOptions />
-          <ProductDelivery />
           <ProductThumbnail />
+          <ProductDelivery />
           <ProductBenefit />
           <Etc />
         </div>
