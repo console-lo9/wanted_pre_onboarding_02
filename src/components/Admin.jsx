@@ -4,6 +4,7 @@ import styles from "./Admin.module.css";
 import { Etc } from "./Etc";
 import { ProductBenefit } from "./ProductBenefit";
 import { ProductDelivery } from "./ProductDelivery";
+import { ProductInfo } from "./ProductInfo";
 import ProductPeriodSetup from "./ProductPeriodSetup";
 import ProductThumbnail from "./ProductThumbnail";
 
@@ -83,6 +84,7 @@ const Admin = () => {
           <ProductPeriodSetup />
           <ProductDelivery />
           <ProductThumbnail />
+          <ProductInfo />
           <ProductBenefit />
           <Etc />
         </div>
