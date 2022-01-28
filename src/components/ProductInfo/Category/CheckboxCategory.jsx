@@ -1,10 +1,11 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import Checkbox from "./Checkbox";
 import { CategoryContext } from "components/ProductInfo/Category/Contexts";
 
 const CheckboxCategory = () => {
-  const { categories, checkedItems } = useContext(CategoryContext);
+  const { categories, checkedItems, checkList } = useContext(CategoryContext);
+
   return (
     <div>
       {categories.map((cate, index) => {

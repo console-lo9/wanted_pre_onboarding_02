@@ -1,10 +1,6 @@
 import { createContext, useState } from "react";
 
-const CategoryContext = createContext({
-  categories: [],
-  checkedItems: [],
-  checkedItemHandler: () => {},
-});
+const CategoryContext = createContext();
 
 const CategoryProvider = ({ children }) => {
   const [categories, setCategories] = useState([...Array(5).keys()]);

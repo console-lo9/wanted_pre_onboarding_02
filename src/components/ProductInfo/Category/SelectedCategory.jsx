@@ -4,6 +4,7 @@ import { CategoryContext } from "components/ProductInfo/Category/Contexts";
 
 const SelectedCategory = () => {
   const { checkedItems, checkedItemHandler } = useContext(CategoryContext);
+
   const onClick = (e) => {
     checkedItemHandler(e.target.value, false);
   };
