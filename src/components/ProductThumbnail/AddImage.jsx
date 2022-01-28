@@ -11,7 +11,7 @@ const AddImage = () => {
   const uploadRef = useRef();
   const [uploadedImg, setUploadedImg] = useState([]);
 
-  const clickHandler = () => {
+  const uploadHandler = () => {
     uploadRef.current.click();
   };
 
@@ -25,11 +25,17 @@ const AddImage = () => {
     }
   };
 
+  const removeHandler = (e) => {
+    const buttonId = e.target.id;
+    console.log(uploadedImg.find((data) => data.id == buttonId));
+    setUploadedImg(uploadedImg.filter((data) => data.id != buttonId));
+  };
+
   return (
     <SectionBody className={styles.addImage}>
       <SectionBodyContent className={styles.flexWrapper}>
         <UploadInput
-          onClick={clickHandler}
+          onClick={uploadHandler}
           onChange={changeFileHandler}
           uploadRef={uploadRef}
         >
@@ -40,7 +46,9 @@ const AddImage = () => {
             return (
               <li key={data.id}>
                 <div>{data.name}</div>
-                <Button tag="xBadge">×</Button>
+                <Button id={data.id} tag="xBadge" onClick={removeHandler}>
+                  ×
+                </Button>
               </li>
             );
           })}
