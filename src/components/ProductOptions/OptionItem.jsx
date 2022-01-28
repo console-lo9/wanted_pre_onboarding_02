@@ -21,8 +21,6 @@ const OptionItem = ({ onDelete, id, optionListId }) => {
     setOptionProduct(newOptionProduct);
   };
 
-  console.log(optionProduct.length);
-
   const [option, setOption] = useState({
     optionId: id,
     optionName: "",
