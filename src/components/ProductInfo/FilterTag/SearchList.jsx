@@ -11,7 +11,6 @@ const SearchList = ({ userInput, values }) => {
   useEffect(() => {
     const v = values.filter((value) => value.includes(userInput));
     setMatchValues(v);
-    matchValues.length !== 0 ? console.log("true") : console.log("false");
   }, [userInput]);
 
   return (
@@ -26,7 +25,11 @@ const SearchList = ({ userInput, values }) => {
         <p>검색 결과가 존재하지 않습니다</p>
       ) : (
         matchValues.map((value) => {
-          return <ListItem index={value}>{value}</ListItem>;
+          return (
+            <ListItem key={Math.random()} index={value}>
+              {value}
+            </ListItem>
+          );
         })
       )}
     </div>
