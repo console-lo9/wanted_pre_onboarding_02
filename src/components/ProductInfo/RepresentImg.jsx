@@ -11,7 +11,7 @@ const RepresentImg = () => {
   return (
     <SectionBody className={styles.container}>
       <ContentBodyTitle>상품 대표 이미지</ContentBodyTitle>
-      <SectionBodyContent>
+      <SectionBodyContent className={styles.box}>
         <UploadImage multiple={true} />
       </SectionBodyContent>
     </SectionBody>

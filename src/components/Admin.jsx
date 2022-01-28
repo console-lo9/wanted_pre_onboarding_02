@@ -2,6 +2,7 @@ import Button from "layout/Button";
 import React from "react";
 import styles from "./Admin.module.css";
 import { ProductDelivery } from "./ProductDelivery";
+import ProductInfo from "./ProductInfo";
 import ProductPeriodSetup from "./ProductPeriodSetup";
 import ProductThumbnail from "./ProductThumbnail";
 
@@ -79,6 +80,7 @@ const Admin = () => {
             </Button>
           </div>
           <ProductPeriodSetup />
+          <ProductInfo />
           <ProductDelivery />
           <ProductThumbnail />
         </div>

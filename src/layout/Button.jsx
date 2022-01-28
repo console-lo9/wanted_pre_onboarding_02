@@ -8,6 +8,7 @@ const AddButton = (props) => {
       className={`${styles.button} ${styles[tag]}`}
       tag={props.tag}
       type={`${props.type}`}
+      onClick={props.onClick}
     >
       {props.children}
     </button>

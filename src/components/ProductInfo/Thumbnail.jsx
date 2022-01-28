@@ -14,7 +14,7 @@ const Thumbnail = () => {
   return (
     <SectionBody className={styles.container}>
       <ContentBodyTitle>썸네일</ContentBodyTitle>
-      <SectionBodyContent>
+      <SectionBodyContent className={styles.box}>
         <UploadImage multiple={false} />
       </SectionBodyContent>
     </SectionBody>

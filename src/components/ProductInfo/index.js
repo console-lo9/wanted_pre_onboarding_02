@@ -6,10 +6,13 @@ import ProductName from "components/ProductInfo/ProductName";
 import RepresentImg from "components/ProductInfo/RepresentImg";
 import Thumbnail from "components/ProductInfo/Thumbnail";
 import TotalAmount from "components/ProductInfo/TotalAmount";
+import SectionWrapper from "layout/Section/SectionWrapper";
+import SectionHeader from "layout/Section/SectionHeader";
 
 const ProductInfo = () => {
   return (
-    <div>
+    <SectionWrapper>
+      <SectionHeader>상품 기본 정보</SectionHeader>
       <Category />
       <FilterTag />
       <ProductName />
@@ -17,7 +20,7 @@ const ProductInfo = () => {
       <Thumbnail />
       <RepresentImg />
       <TotalAmount />
-    </div>
+    </SectionWrapper>
   );
 };
 
