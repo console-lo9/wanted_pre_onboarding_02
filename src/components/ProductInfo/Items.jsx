@@ -4,7 +4,7 @@ import Item from "./Item";
 import styles from "./Items.module.css";
 import NewItem from "./NewItem";
 
-function Items() {
+function Items({ order }) {
   const [labelArr, setLabelArr] = useState([
     "제품명 / 중량",
     "원산지 / 원재료 함량",
@@ -23,19 +23,20 @@ function Items() {
   const [newItemTitle, setNewItemTitle] = useState("");
   const [newItemContent, setNewItemContent] = useState("");
 
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   setLabelArr((state) => [...state, newItemTitle]);
-  //   setPlaceHolderArr((state) => [...state, newItemContent]);
-  //   setNewItemTitle("");
-  //   setNewItemContent("");
-  // };
+  const handleClick = (event) => {
+    if (newItemTitle === "" || newItemContent === "") return;
+    setLabelArr((state) => [...state, newItemTitle]);
+    setPlaceHolderArr((state) => [...state, newItemContent]);
+    setNewItemTitle("");
+    setNewItemContent("");
+  };
   useEffect(() => {
     setNewItemTitle("");
     setNewItemContent("");
   }, []);
   return (
     <div className={styles.flexBox}>
+      <div>정보고시 {order}</div>
       {labelArr.map((label, i) => (
         <Item
           label={label}
@@ -49,9 +50,13 @@ function Items() {
         newItemContent={newItemContent}
         setNewItemTitle={setNewItemTitle}
         setNewItemContent={setNewItemContent}
-        setLabelArr={setLabelArr}
-        setPlaceHolderArr={setPlaceHolderArr}
-        // handleSubmit={handleSubmit}
+        order={order}
+      />
+      <button
+        children="+ 항목 추가"
+        type="submit"
+        form={`form-${order}`}
+        onClick={handleClick}
       />
     </div>
   );

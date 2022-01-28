@@ -6,9 +6,7 @@ function NewItem({
   setNewItemContent,
   newItemTitle,
   newItemContent,
-  setLabelArr,
-  setPlaceHolderArr,
-  //   handleSubmit,
+  order,
 }) {
   const handleChange = (e) => {
     setNewItemTitle(e.target.value);
@@ -16,16 +14,9 @@ function NewItem({
   const handleChange2 = (e) => {
     setNewItemContent(e.target.value);
   };
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setLabelArr((state) => [...state, newItemTitle]);
-    setPlaceHolderArr((state) => [...state, newItemContent]);
-    setNewItemTitle("");
-    setNewItemContent("");
-  };
   return (
     <div>
-      <form>
+      <form id={`form-${order}`}>
         <input
           type="text"
           placeholder="항목 제목 자유 입력"
@@ -40,12 +31,7 @@ function NewItem({
           value={newItemContent}
           required
         />
-        <button
-          tag="add"
-          children="+ 항목 추가"
-          type="submit"
-          onSubmit={handleSubmit}
-        />
+        <button>삭제</button>
       </form>
     </div>
   );

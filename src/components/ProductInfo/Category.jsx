@@ -1,15 +1,13 @@
 import SectionHeader from "layout/Section/SectionHeader";
 import SectionWrapper from "layout/Section/SectionWrapper";
 import React, { useState } from "react";
-import Items from "./Items";
+import ItemBox from "./ItemBox";
 
 function Category() {
-  const [order, setOrder] = useState(1);
-
   return (
     <SectionWrapper>
-      <SectionHeader children={`정보고시 ${order}`} />
-      <Items />
+      <SectionHeader children="상품 정보 고시" />
+      <ItemBox />
     </SectionWrapper>
   );
 }
