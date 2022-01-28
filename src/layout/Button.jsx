@@ -9,6 +9,7 @@ const AddButton = (props) => {
       tag={props.tag}
       type={`${props.type}`}
       onClick={props.onClick}
+      onSubmit={props.onSubmit}
       id={props.id}
       value={props.value}
     >
