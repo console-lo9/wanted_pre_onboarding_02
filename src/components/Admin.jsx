@@ -1,3 +1,4 @@
+import Button from "layout/Button";
 import React from "react";
 import styles from "./Admin.module.css";
 import { ProductDelivery } from "./ProductDelivery";
@@ -63,7 +64,21 @@ const Admin = () => {
         <div>
           <div>
             <div>상품 등록</div>
-            <button>저장하기</button>
+            <Button Button tag="save">
+              저장하기
+            </Button>
+            <Button Button tag="delete">
+              삭제
+            </Button>
+            <Button Button tag="add">
+              + 옵션 세트 추가
+            </Button>
+            <Button Button tag="add">
+              + 이미지 첨부
+            </Button>
+            <Button Button tag="category">
+              + 이미지 첨부
+            </Button>
           </div>
           <ProductPeriodSetup />
           <ProductDelivery />
