@@ -29,7 +29,7 @@ const ProductName = () => {
       <SectionBodyContent>
         <input type="text" name="product" value={product} onChange={onChange} />
       </SectionBodyContent>
-      <ProductCode />
+      <ProductCode product={product} />
     </SectionBody>
   );
 };
