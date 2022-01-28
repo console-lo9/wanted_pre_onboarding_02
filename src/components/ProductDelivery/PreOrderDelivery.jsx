@@ -4,7 +4,7 @@ import ContentBodyTitle from "layout/Section/ContentBodyTitle";
 import SectionBody from "layout/Section/SectionBody";
 import SectionBodyContent from "layout/Section/SectionBodyContent";
 import ShortCalendar from "layout/ShortCalendar";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./PreOrderDelivery.module.css";
 import SetTime from "./SetTime";
 
@@ -18,9 +18,11 @@ function PreOrderDelivery({ checked3, setChecked1, setChecked2, setChecked3 }) {
     setDisabled((state) => !state);
   };
 
-  const [orderStartTime, setOrderStartTime] = useState();
   const [orderEndTime, setOrderEndTime] = useState();
   const [disabled, setDisabled] = useState(true);
+  useEffect(() => {
+    setOrderEndTime(new Date().getTime());
+  }, []);
 
   return (
     <SectionBody children="flexBox">
@@ -29,20 +31,15 @@ function PreOrderDelivery({ checked3, setChecked1, setChecked2, setChecked3 }) {
         <OnOffButton id={ID_3} onChange={handleChange} checked={checked3} />
         <div>
           <span>주문 시간</span>
-          <Calendar setTime={setOrderStartTime} disabled={disabled} />
+          <Calendar disabled={disabled} />
           <span>~</span>
-          <Calendar
-            setTime={setOrderEndTime}
-            startTime={orderStartTime}
-            endTime={orderEndTime}
-            disabled={disabled}
-          />
+          <Calendar setTime={setOrderEndTime} disabled={disabled} />
         </div>
         <div>
           <span>새벽 배송</span>
-          <ShortCalendar disabled={disabled} />
+          <ShortCalendar disabled={disabled} endTime={orderEndTime} />
           <span>일반 배송</span>
-          <ShortCalendar disabled={disabled} />
+          <ShortCalendar disabled={disabled} endTime={orderEndTime} />
         </div>
       </SectionBodyContent>
     </SectionBody>
