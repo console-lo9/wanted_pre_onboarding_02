@@ -1,5 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { ImageContext } from "components/ProductInfo/UploadImage/Contexts";
+
+import Button from "layout/Button";
 const PrintImageName = () => {
   const { images, setImages } = useContext(ImageContext);
   const onRemove = (name) => {
@@ -12,7 +14,9 @@ const PrintImageName = () => {
           return (
             <div key={index}>
               <p>{img}</p>
-              <button onClick={() => onRemove(img)}>X</button>
+              <Button tag="xBadge" onClick={() => onRemove(img)}>
+                ×
+              </Button>
             </div>
           );
         })}

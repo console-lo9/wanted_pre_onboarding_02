@@ -1,0 +1,58 @@
+.btn {
+  position: absolute;
+  visibility: hidden;
+}
+
+.label {
+  display: block;
+  position: relative;
+  width: 40px;
+  height: 14px;
+  border-radius: 17px;
+  background-color: gray;
+  transition-duration: 0.2s;
+}
+
+.label > span {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -3px;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 1px 1px 2px 1px #999;
+  transition-duration: 0.2s;
+}
+
+.label:before,
+.label:after {
+  position: absolute;
+  top: 0;
+  width: 34px;
+  font-size: 11px;
+  line-height: 34px;
+  color: #fff;
+  text-align: center;
+}
+
+.label:before {
+  left: 0;
+  content: "";
+}
+
+.label:after {
+  right: 0;
+  content: "";
+}
+
+.btn:checked + .label {
+  background-color: rgb(170, 188, 247);
+}
+
+.btn:checked + .label span {
+  background-color: blue;
+  transform: translateX(20px);
+}

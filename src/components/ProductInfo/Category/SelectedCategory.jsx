@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 
 import { CategoryContext } from "components/ProductInfo/Category/Contexts";
 
+import Button from "layout/Button";
 const SelectedCategory = () => {
   const { checkedItems, checkedItemHandler } = useContext(CategoryContext);
 
@@ -16,9 +17,9 @@ const SelectedCategory = () => {
           return (
             <div key={index}>
               {cate}{" "}
-              <button onClick={onClick} value={cate}>
-                X
-              </button>
+              <Button onClick={onClick} value={cate} tag="xBadge">
+                ×
+              </Button>
             </div>
           );
         })
