@@ -1,0 +1,10 @@
+.title {
+  vertical-align: top;
+  margin: 0;
+  padding: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  background: rgb(240, 240, 240);
+
+  width: 100px;
+}

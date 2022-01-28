@@ -1,0 +1,29 @@
+.button {
+  border: none;
+  font-weight: 500;
+  border-radius: 4px;
+  padding: 8px 20px;
+  margin: 0 5px;
+}
+.save {
+  background: rgb(53, 47, 110);
+  color: #fff;
+  outline: 2px solid rgb(53, 47, 110);
+}
+
+.delete {
+  background: transparent;
+  color: rgb(220, 44, 44);
+
+  outline: 2px solid rgb(220, 44, 44);
+}
+
+.add {
+  background: transparent;
+  outline: 2px solid rgb(53, 47, 110);
+}
+
+.category {
+  background: rgb(239, 238, 243);
+  outline: 2px solid rgb(53, 47, 110);
+}
