@@ -14,7 +14,6 @@ function ShortCalendar({ disabled, endTime }) {
         inputFormat={"yyyy.MM.dd"}
         mask={"____.__.__"}
         onChange={(newValue) => {
-          console.log(endTime - newValue.getTime());
           setValue(newValue);
           if (endTime && endTime > newValue.getTime()) {
             alert("주문 시간 이후로 출고일을 지정해 주세요");
