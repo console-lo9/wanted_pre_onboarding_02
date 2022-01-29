@@ -34,7 +34,7 @@ const ProductOptionIdx = () => {
     setOptionSetList((prev) =>
       prev.map((item) => {
         if (item.id !== setId) return item;
-        if (setId.id === null) console.log("??");
+        console.log(item);
         return {
           ...item,
           optionList: item.optionList.filter((option) => option.id !== itemId),
@@ -71,7 +71,6 @@ const ProductOptionIdx = () => {
             optionList={it}
             deleteOptionSet={deleteOptionSet}
           />
-          <OptionItem />
         </>
       ))}
     </SectionWrapper>
