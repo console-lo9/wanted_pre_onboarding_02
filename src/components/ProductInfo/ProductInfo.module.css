@@ -6,3 +6,17 @@
   display: flex;
   align-items: center;
 }
+.filter__input {
+  width: 600px;
+  height: 45px;
+}
+.filter__searchButton {
+  position: relative;
+  right: 80px;
+}
+.name__input {
+  width: 300px;
+}
+.info__input {
+  width: 600px;
+}

@@ -1,6 +1,7 @@
 import AddButton from "layout/Button";
 import React from "react";
 
+import Input from "layout/Input";
 function NewItem({
   setNewItemTitle,
   setNewItemContent,
@@ -19,14 +20,14 @@ function NewItem({
   return (
     <div>
       <form id={`form-${order}`}>
-        <input
+        <Input
           type="text"
           placeholder="항목 제목 자유 입력"
           onChange={handleChange}
           value={newItemTitle}
           required
         />
-        <input
+        <Input
           type="text"
           placeholder="내용을 입력해주세요."
           onChange={handleChange2}
