@@ -3,6 +3,7 @@ import ProductCode from "./ProductCode";
 
 import styles from "components/ProductInfo/ProductInfo.module.css";
 
+import Input from "layout/Input";
 import ContentBodyTitle from "layout/Section/ContentBodyTitle";
 import SectionBody from "layout/Section/SectionBody";
 import SectionBodyContent from "layout/Section/SectionBodyContent";
@@ -26,11 +27,12 @@ const ProductName = () => {
         <p>상품명</p>
       </ContentBodyTitle>
       <SectionBodyContent>
-        <input
+        <Input
           type="text"
           name="product"
           value={product}
           onChange={handleChange}
+          placeholder="상품명을 입력해 주세요."
         />
       </SectionBodyContent>
       <ProductCode product={product} />
