@@ -28,7 +28,7 @@ function ItemBox() {
           />
         ))}
       </div>
-      <button onClick={handleClick}>정보 고시 추가</button>
+      <button onClick={handleClick}>+ 정보고시 추가</button>
     </div>
   );
 }
