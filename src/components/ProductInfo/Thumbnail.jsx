@@ -8,9 +8,6 @@ import ContentBodyTitle from "layout/Section/ContentBodyTitle";
 import SectionBody from "layout/Section/SectionBody";
 import SectionBodyContent from "layout/Section/SectionBodyContent";
 const Thumbnail = () => {
-  useEffect(() => {
-    // console.log(file && file[0].name);
-  });
   return (
     <SectionBody className={styles.container}>
       <ContentBodyTitle>상품 썸네일</ContentBodyTitle>
