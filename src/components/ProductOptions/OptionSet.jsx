@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import OptionEditor from "components/ProductOptions/OptionEditor";
 import OptionList from "components/ProductOptions/OptionList";
-import uuid from "utils/uuid";
 
 const OptionSet = ({ onDelete, onCreate, optionList, deleteOptionSet }) => {
   const clickHandler = () => {
