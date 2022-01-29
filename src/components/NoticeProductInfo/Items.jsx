@@ -1,4 +1,3 @@
-import AddButton from "layout/Button";
 import React, { useEffect, useState } from "react";
 import Item from "./Item";
 import styles from "./Items.module.css";
@@ -33,7 +32,7 @@ function Items({ order, name, handleDeleteItemBox }) {
   const handleDelete = (e) => {
     e.preventDefault();
     const targetI = Number(e.target.name);
-    if (targetI >= 5) {
+    if (targetI > 5) {
       setLabelArr((arr) => arr.filter((item, i) => i !== targetI));
     } else {
       setNewItemTitle("");

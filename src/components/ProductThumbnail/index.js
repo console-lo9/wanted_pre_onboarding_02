@@ -1,3 +1,4 @@
+import SectionBody from "layout/Section/SectionBody";
 import SectionHeader from "layout/Section/SectionHeader";
 import SectionWrapper from "layout/Section/SectionWrapper";
 import { Fragment } from "react";

@@ -15,7 +15,7 @@ const OptionItem = ({ onDelete, id, optionListId }) => {
 
   const deleteOption = (targetId) => {
     console.log(`${id}가 삭제되었습니다.`);
-    console.log(targetId);
+    console.log("asd", targetId);
 
     const newOptionProduct = optionProduct.filter((it) => it.id !== targetId);
     setOptionProduct(newOptionProduct);
