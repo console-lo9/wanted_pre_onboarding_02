@@ -1,7 +1,7 @@
-input[type="checkbox"] {
+.input[type="checkbox"] {
   display: none;
 }
-input[type="checkbox"] + label {
+.input[type="checkbox"] + label {
   display: inline-block;
   width: 30px;
   height: 30px;
@@ -9,7 +9,7 @@ input[type="checkbox"] + label {
   border-radius: 4px;
   position: relative;
 }
-input:checked + label::after {
+.input:checked + label::after {
   background-color: #352e6e;
   color: white;
   content: "✓";
