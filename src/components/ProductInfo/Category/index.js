@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 import CheckboxCategory from "./CheckboxCategory";
-import SelectedCategory from "./SelectedCategory";
 
 import ContentBodyTitle from "layout/Section/ContentBodyTitle";
 import SectionBody from "layout/Section/SectionBody";
@@ -20,7 +19,6 @@ const Category = () => {
         <SectionBodyContent>
           <div className={styles.container}>
             <CheckboxCategory />
-            <SelectedCategory />
           </div>
         </SectionBodyContent>
       </CategoryProvider>

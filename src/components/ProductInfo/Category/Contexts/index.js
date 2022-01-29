@@ -3,24 +3,19 @@ import { createContext, useState } from "react";
 const CategoryContext = createContext();
 
 const CategoryProvider = ({ children }) => {
-  const [categories, setCategories] = useState([...Array(5).keys()]);
-  const [checkedItems, setCheckedItems] = useState([]);
+  const categories = [...Array(5).keys()];
+  const categoriesBool = [...Array(categories.length).fill(false)];
 
-  const checkedItemHandler = (id, isChecked) => {
-    if (isChecked) {
-      setCheckedItems([...checkedItems, id]);
-    } else if (!isChecked && checkedItems.includes(id)) {
-      setCheckedItems(checkedItems.filter((item) => item !== id));
-    }
-    return checkedItems;
-  };
+  let result = {};
+  categories.forEach((cate, i) => (result[i] = categoriesBool[i]));
+
+  const [cateObject, setCateObject] = useState(result);
 
   return (
     <CategoryContext.Provider
       value={{
-        categories,
-        checkedItems,
-        checkedItemHandler,
+        cateObject,
+        setCateObject,
       }}
     >
       {children}

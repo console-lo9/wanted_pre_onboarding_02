@@ -1,31 +1,23 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 
 import { CategoryContext } from "components/ProductInfo/Category/Contexts";
 
+import styles from "./SelectedCategory.module.css";
 import Button from "layout/Button";
-const SelectedCategory = () => {
-  const { checkedItems, checkedItemHandler } = useContext(CategoryContext);
+const SelectedCategory = ({ value, checked }) => {
+  const { cateObject, setCateObject } = useContext(CategoryContext);
 
   const onClick = (e) => {
-    checkedItemHandler(e.target.value, false);
+    let copyObject = { ...cateObject };
+    copyObject[value] = !checked;
+    setCateObject(copyObject);
   };
-
   return (
-    <div>
-      {checkedItems.length ? (
-        checkedItems.map((cate, index) => {
-          return (
-            <div key={index}>
-              {cate}{" "}
-              <Button onClick={onClick} value={cate} tag="xBadge">
-                ×
-              </Button>
-            </div>
-          );
-        })
-      ) : (
-        <p>카테고리를 지정해 주세요</p>
-      )}
+    <div className={!checked ? styles.notChecked : 0}>
+      {value}{" "}
+      <Button onClick={onClick} value={value} tag="xBadge">
+        ×
+      </Button>
     </div>
   );
 };
