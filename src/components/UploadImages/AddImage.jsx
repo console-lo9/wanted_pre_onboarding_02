@@ -9,7 +9,7 @@ import styles from "./AddImage.module.css";
 
 const AddImage = ({ multiple }) => {
   const uploadRef = useRef();
-  const [uploadedImg, setUploadedImg] = useState([{ id: "", name: "" }]);
+  const [uploadedImg, setUploadedImg] = useState([]);
 
   const uploadHandler = () => {
     uploadRef.current.click();
@@ -19,14 +19,10 @@ const AddImage = ({ multiple }) => {
     const files = e.target.files;
 
     for (let i = 0; i < files.length; i++) {
-      if (files[i].name !== uploadedImg[i].name) {
-        setUploadedImg((prev) => [
-          { id: Math.random(), name: files[i].name },
-          ...prev,
-        ]);
-      } else {
-        setUploadedImg((prev) => [...prev]);
-      }
+      setUploadedImg((prev) => [
+        { id: Math.random(), name: files[i].name },
+        ...prev,
+      ]);
     }
   };
 
