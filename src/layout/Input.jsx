@@ -1,5 +1,6 @@
 import React from "react";
 
+import styles from "./Input.module.css";
 const Input = (props) => {
   const {
     type = "text",
@@ -7,6 +8,9 @@ const Input = (props) => {
     placeholder = "",
     value,
     onChange,
+    onFocus,
+    onBlur,
+    ref,
     id = "",
     className = "",
     required = true,
@@ -18,8 +22,11 @@ const Input = (props) => {
       placeholder={placeholder}
       value={value}
       onChange={onChange}
+      onFocus={onFocus}
+      onBlur={onBlur}
+      ref={ref}
       id={id}
-      className={className}
+      className={`${styles.input} ${className}`}
       required={required}
     />
   );

@@ -1,25 +1,23 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { CategoryContext } from "./Contexts";
 
-import styles from "./Checkbox.module.css";
+import Check from "layout/Check";
+const Checkbox = ({ value, checked }) => {
+  const { cateObject, setCateObject } = useContext(CategoryContext);
 
-const Checkbox = ({ value, index }) => {
-  const [checked, setChecked] = useState(false);
   const checkHandler = (e) => {
-    setChecked((checked) => !checked);
-    checkedItemHandler(e.target.value, e.target.checked);
+    let copyObject = { ...cateObject };
+    copyObject[value] = !checked;
+    setCateObject(copyObject);
   };
-  const { checkedItemHandler } = useContext(CategoryContext);
   return (
     <div>
-      <input
-        className={styles.checkbox}
+      <Check
         type="checkbox"
         checked={checked}
         value={value}
         onChange={(e) => checkHandler(e)}
       />
-      <label htmlFor={value}></label>
     </div>
   );
 };

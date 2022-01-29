@@ -5,7 +5,7 @@ const AddButton = (props) => {
 
   return (
     <button
-      className={`${styles.button} ${styles[tag]}`}
+      className={`${styles.button} ${styles[tag]} ${props.className}`}
       tag={props.tag}
       type={`${props.type}`}
       onClick={props.onClick}
