@@ -16,6 +16,7 @@ const IntroInfo = () => {
       <ContentBodyTitle>상품 구성 소개 정보</ContentBodyTitle>
       <SectionBodyContent>
         <Input
+          className={styles.info__input}
           type="text"
           name="info"
           value={info}

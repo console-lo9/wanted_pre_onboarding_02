@@ -28,6 +28,7 @@ const ProductName = () => {
       </ContentBodyTitle>
       <SectionBodyContent>
         <Input
+          className={styles.name__input}
           type="text"
           name="product"
           value={product}
