@@ -5,3 +5,7 @@
 .selected {
   flex-direction: column;
 }
+
+.setNone {
+  display: none;
+}
