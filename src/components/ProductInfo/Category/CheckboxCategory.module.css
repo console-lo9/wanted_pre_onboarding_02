@@ -1,0 +1,7 @@
+.container {
+  display: flex;
+}
+.checkbox,
+.selected {
+  flex-direction: column;
+}

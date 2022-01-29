@@ -1,18 +1,19 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { CategoryContext } from "./Contexts";
 
-const Checkbox = ({ value, index }) => {
-  const [checked, setChecked] = useState(false);
+const Checkbox = ({ value, checked }) => {
+  const { cateObject, setCateObject } = useContext(CategoryContext);
+
   const checkHandler = (e) => {
-    setChecked((checked) => !checked);
-    checkedItemHandler(e.target.value, e.target.checked);
+    let copyObject = { ...cateObject };
+    copyObject[value] = !checked;
+    setCateObject(copyObject);
   };
-  const { checkedItemHandler } = useContext(CategoryContext);
   return (
     <input
       type="checkbox"
-      checked={checked}
       value={value}
+      checked={checked}
       onChange={(e) => checkHandler(e)}
     />
   );
