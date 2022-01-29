@@ -7,3 +7,6 @@
 .selectedContainer p {
   font-size: 18px;
 }
+.notChecked {
+  display: none;
+}

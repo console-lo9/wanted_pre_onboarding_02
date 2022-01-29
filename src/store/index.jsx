@@ -33,6 +33,19 @@ const imgUploadSlice = createSlice({
   },
 });
 
+// const optionInitialState = { optionSet: {}, option: {}, smallOption: {}  }
+// const optionSlice = createSlice({
+//   name: "option",
+//   initialState: optionalInitialState,
+//   reducers: {
+//   optionSet(state) {
+//   state.optionSet
+// },
+//   option() {},
+//   smallOption() {},
+// } 
+//  });
+
 const store = configureStore({
   reducer: { period: setPeriodSlice.reducer, upload: imgUploadSlice.reducer },
 });

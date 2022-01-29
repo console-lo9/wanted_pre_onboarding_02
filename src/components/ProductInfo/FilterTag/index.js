@@ -4,6 +4,8 @@ import { ItemContext, ItemProvider } from "./Contexts";
 
 import styles from "components/ProductInfo/ProductInfo.module.css";
 
+import Button from "layout/Button";
+import Input from "layout/Input";
 import ContentBodyTitle from "layout/Section/ContentBodyTitle";
 import SectionBody from "layout/Section/SectionBody";
 import SectionBodyContent from "layout/Section/SectionBodyContent";
@@ -78,14 +80,18 @@ const FilterTag = () => {
         <p>필터 태그</p>
       </ContentBodyTitle>
       <SectionBodyContent>
-        <input
+        <Input
+          className={styles.filter__input}
+          placeholder="필터태그를 검색해 주세요."
           type="text"
           onChange={handleChange}
           onFocus={() => setIsShow(true)}
           onBlur={() => setIsShow(false)}
           ref={inputRef}
-        ></input>
-        <button>검색</button>
+        />
+        <Button className={styles.filter__searchButton} tag="add">
+          검색
+        </Button>
         <SearchList userInput={userInput} values={filterData} />
         <p>지정된 필터 태그</p>
         <SelectedTag />

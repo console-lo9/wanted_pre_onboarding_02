@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import SectionWrapper from "layout/Section/SectionWrapper";
 import SectionHeader from "layout/Section/SectionHeader";
+import OptionItem from "components/ProductOptions/OptionItem";
 
 import uuid from "utils/uuid";
 import OptionSet from "./OptionSet";
@@ -18,7 +19,6 @@ const ProductOptionIdx = () => {
     setOptionSetList((prev) =>
       prev.map((item) => {
         if (item.id !== targetId) return item; // 원래 아이템을 그대로 둔다!
-
         // 새로운 after 상태를 만든다!
         return {
           ...item,
@@ -30,10 +30,12 @@ const ProductOptionIdx = () => {
 
   const onDelete = (setId, itemId) => {
     console.log(`${setId}에 있는 ${itemId}가 삭제되었습니다.`);
+    console.log();
+
     setOptionSetList((prev) =>
       prev.map((item) => {
         if (item.id !== setId) return item;
-
+        if (setId.id === null) console.log("??");
         return {
           ...item,
           optionList: item.optionList.filter((option) => option.id !== itemId),
@@ -50,18 +52,28 @@ const ProductOptionIdx = () => {
     setOptionSetList((prev) => [...prev, newOptionList]);
   };
 
+  const deleteOptionSet = (targetId) => {
+    const newOptionSetList = optionSetList.filter((it) => it.id !== targetId);
+    setOptionSetList(newOptionSetList);
+  };
+
   return (
     <SectionWrapper>
       <SectionHeader>상품 옵션</SectionHeader>
       <button onClick={addOptionSet}> 옵션 세트 추가</button>
 
       {optionSetList.map((it) => (
-        <OptionSet
-          key={it.id}
-          onDelete={onDelete}
-          onCreate={onCreate}
-          optionList={it}
-        />
+        <>
+          <OptionSet
+            key={it.id}
+            id={it.id}
+            onDelete={onDelete}
+            onCreate={onCreate}
+            optionList={it}
+            deleteOptionSet={deleteOptionSet}
+          />
+          <OptionItem />
+        </>
       ))}
     </SectionWrapper>
   );
