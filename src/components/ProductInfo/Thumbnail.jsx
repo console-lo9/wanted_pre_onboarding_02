@@ -19,10 +19,11 @@ const Thumbnail = () => {
     <SectionBody className={styles.container}>
       <ContentBodyTitle>상품 썸네일</ContentBodyTitle>
       <SectionBodyContent className={styles.box}>
-        <ImageProvider>
+        <UploadImages />
+        {/* <ImageProvider>
           <AttachImage />
           <PrintImageName />
-        </ImageProvider>
+        </ImageProvider> */}
       </SectionBodyContent>
     </SectionBody>
   );

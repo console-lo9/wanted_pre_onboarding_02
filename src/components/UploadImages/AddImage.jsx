@@ -45,12 +45,12 @@ const AddImage = ({ multiple }) => {
       <ul>
         {uploadedImg.map((data) => {
           return (
-            <li key={data.id}>
+            <div className={styles.printoutput} key={Math.random()}>
               <div>{data.name}</div>
               <Button id={data.id} tag="xBadge" onClick={removeHandler}>
                 ×
               </Button>
-            </li>
+            </div>
           );
         })}
       </ul>
