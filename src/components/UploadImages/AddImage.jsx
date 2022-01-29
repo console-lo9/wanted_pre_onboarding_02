@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
 import SectionBody from "layout/Section/SectionBody";
 import SectionBodyContent from "layout/Section/SectionBodyContent";
@@ -30,6 +30,9 @@ const AddImage = ({ multiple }) => {
     const buttonId = e.target.id;
     setUploadedImg(uploadedImg.filter((data) => data.id !== buttonId));
   };
+  React.useEffect(() => {
+    console.log(uploadedImg);
+  });
 
   return (
     <SectionBodyContent className={styles.flexWrapper}>
@@ -44,12 +47,12 @@ const AddImage = ({ multiple }) => {
       <ul>
         {uploadedImg.map((data) => {
           return (
-            <li key={data.id}>
+            <div className={styles.printoutput} key={Math.random()}>
               <div>{data.name}</div>
               <Button id={data.id} tag="xBadge" onClick={removeHandler}>
                 ×
               </Button>
-            </li>
+            </div>
           );
         })}
       </ul>
