@@ -1,4 +1,21 @@
 .flexBox {
   display: flex;
   flex-direction: column;
+  padding: 4%;
+}
+
+.itemHead {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.itemHead > span {
+  font-weight: 700;
+}
+.itemHead > button {
+  border: 1px gainsboro solid;
+  width: 50px;
+  padding: 5px;
+  border-radius: 4px;
 }
