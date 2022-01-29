@@ -11,7 +11,7 @@ const SearchList = ({ userInput, values }) => {
   useEffect(() => {
     const v = values.filter((value) => value.includes(userInput));
     setMatchValues(v);
-  }, [userInput]);
+  }, [userInput, values]);
 
   return (
     <div
