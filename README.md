@@ -1,6 +1,10 @@
 # wated_pre_onboarding_02
 
-1.  초기 세팅
+
+### 배포 주소
+ https://fervent-tereshkova-9b041a.netlify.app/
+ 
+### 초기 세팅
 
     1. 설치
        1. npm install
@@ -9,7 +13,7 @@
     2. 절대 경로 설정
        1. 참고문헌: https://create-react-app.dev/docs/importing-a-component/#absolute-imports
 
-2.  파일 구조 설정
+### 파일 구조 설정
 
             src
             ┃
@@ -28,7 +32,7 @@
             ┃
             ┗ App.js, index.css, index.js
 
-3.  과제 중점 사항
+### 과제 중점 사항
     1. 재사용 가능성 향상
        1. 재사용 가능한 하나의 버튼 컴포넌를 생성 
        <img src="https://cdn.discordapp.com/attachments/935080254266019874/936439822669742160/2022-01-28_104945.jpg" alt="img">
