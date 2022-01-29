@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+}
+.checkbox,
+.selected {
+  flex-direction: column;
+}
+
+.innerContainer {
+  display: flex;
+}
+
+.setNone {
+  display: none;
+}
