@@ -11,7 +11,7 @@ const ProductOptionIdx = () => {
 
   const onCreate = (targetId, newOption) => {
     const newOptionItem = {
-      id: crypto.randomUUID(),
+      id: crypto.randomUUID() + "d",
     };
 
     // 어떤 리스트에 추가할 것인가? => id에 해당하는 값을...
@@ -20,9 +20,10 @@ const ProductOptionIdx = () => {
       prev.map((item) => {
         if (item.id !== targetId) return item; // 원래 아이템을 그대로 둔다!
         // 새로운 after 상태를 만든다!
+        console.log(item.optionList);
         return {
           ...item,
-          optionList: [...item.optionList, newOption],
+          optionList: [...item.optionList, newOptionItem],
         };
       })
     );
@@ -30,12 +31,12 @@ const ProductOptionIdx = () => {
 
   const onDelete = (setId, itemId) => {
     console.log(`${setId}에 있는 ${itemId}가 삭제되었습니다.`);
-    console.log();
-
     setOptionSetList((prev) =>
       prev.map((item) => {
         if (item.id !== setId) return item;
-        console.log(item);
+        if (item.optionList.length === 0) {
+          deleteOptionSet(setId);
+        }
         return {
           ...item,
           optionList: item.optionList.filter((option) => option.id !== itemId),

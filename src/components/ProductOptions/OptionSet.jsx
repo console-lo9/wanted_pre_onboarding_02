@@ -7,7 +7,6 @@ import OptionItem from "./OptionItem";
 const OptionSet = ({ onDelete, onCreate, optionList, deleteOptionSet, id }) => {
   const optionListId = optionList.id;
   const clickHandler = () => {
-    console.log(`clickHandler${optionList.id}`);
     deleteOptionSet(optionList.id);
     //onDelete()
   };
