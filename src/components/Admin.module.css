@@ -1,0 +1,105 @@
+.admin {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+.header nav {
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-top {
+  background: black;
+  width: auto;
+}
+
+.nav-bottom {
+  background: #fff;
+
+  border-bottom: 2px solid var(--maincolor-lightgrey);
+}
+.nav-bottom div {
+  margin: 30px;
+}
+.nav-bottom span {
+  margin: auto 5px;
+}
+
+.nav-bottom span:last-child {
+  color: rgb(108, 108, 108);
+  font-size: 14px;
+}
+
+.logo {
+  display: flex;
+  margin-left: 20px;
+}
+
+.logo span {
+  display: flex;
+
+  color: #fff;
+  font-size: 20px;
+  margin: auto 5px;
+}
+
+.logo img {
+  width: 100px;
+}
+
+.body {
+  position: relative;
+  top: 85px;
+  z-index: 1;
+  display: flex;
+}
+
+.left-nav {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  border-right: 2px solid var(--maincolor-grey);
+  position: fixed;
+  left: 0;
+}
+.left-nav div {
+  margin: 0;
+  padding: 12px;
+  padding-left: 22px;
+}
+
+.left-nav img {
+  width: 80px;
+}
+
+.left-nav ul {
+  margin: 0;
+  padding: 12px;
+  padding-left: 26px;
+  border-top: 2px solid rgb(239, 239, 239);
+  list-style: none;
+  font-weight: 600;
+  color: rgb(0, 0, 0);
+}
+
+.left-nav li {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.label {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.sectionName {
+  margin-left: 20px;
+}

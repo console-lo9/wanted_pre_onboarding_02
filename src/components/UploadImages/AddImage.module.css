@@ -1,0 +1,8 @@
+.addImage {
+  padding: 20px;
+}
+
+.flexWrapper {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,21 @@
+:root {
+  --maincolor-deepblue: rgb(53, 47, 110);
+  --maincolor-red: rgb(220, 44, 44);
+  --maincolor-lightgrey: rgb(239, 238, 243);
+  --maincolor-grey: rgb(227, 227, 227);
+  --maincolor-heavygrey: rgb(247, 247, 247);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

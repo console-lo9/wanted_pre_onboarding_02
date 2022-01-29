@@ -1,13 +1,18 @@
 import React from "react";
 
-const Input = (props) => {
+import styles from "./Input.module.css";
+const Input = React.forwardRef((props, ref) => {
   const {
     type = "text",
     name = "",
     placeholder = "",
     value,
     onChange,
+    onFocus,
+    onBlur,
+    id = "",
     className = "",
+    required = true,
   } = props;
   return (
     <input
@@ -16,9 +21,14 @@ const Input = (props) => {
       placeholder={placeholder}
       value={value}
       onChange={onChange}
-      className={className}
+      onFocus={onFocus}
+      onBlur={onBlur}
+      ref={ref}
+      id={id}
+      className={`${styles.input} ${className}`}
+      required={required}
     />
   );
-};
+});
 
 export default Input;

@@ -1,13 +1,8 @@
-import ProductOptions from "components/ProductOptions/ProductOptions";
 import React from "react";
-import style from "../pages/AddNewProduct.module.css";
+import Admin from "components/Admin";
 
 function ProductRegistration() {
-  return (
-    <div className={style.container}>
-      <ProductOptions />
-    </div>
-  );
+  return <Admin />;
 }
 
 export default ProductRegistration;
