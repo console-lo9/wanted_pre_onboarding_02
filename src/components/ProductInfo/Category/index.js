@@ -8,13 +8,13 @@ import SectionBodyContent from "layout/Section/SectionBodyContent";
 
 import styles from "components/ProductInfo/ProductInfo.module.css";
 
-import { CategoryProvider } from "./Contexts";
+import { CategoryProvider } from "store/Contexts/Category";
 const Category = () => {
   return (
     <SectionBody className={styles.container}>
       <CategoryProvider>
         <ContentBodyTitle>
-          <p>카테고리</p>
+          <p>카테고리 * </p>
         </ContentBodyTitle>
         <SectionBodyContent>
           <div className={styles.container}>
