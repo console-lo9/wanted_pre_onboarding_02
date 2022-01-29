@@ -10,11 +10,6 @@ const AttachImage = ({ multiple }) => {
 
   const onLoadFile = (e) => {
     if (multiple) {
-      let files = [];
-      // Object.entries(e.target.files).map(([id, item]) => {
-      //   return files.push(item.name);
-      // });
-      // setImages(images.concat(files));
       Object.entries(e.target.files).map(([id, item]) => {
         setImages((prev) => {
           return [...prev, { id: tempId++, name: item.name }];

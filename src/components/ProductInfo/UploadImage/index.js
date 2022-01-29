@@ -7,8 +7,6 @@ const UploadImage = ({ multiple }) => {
   return (
     <ImageProvider>
       <UploadImages multiple={multiple} />
-      {/* <AttachImage multiple={multiple} />
-      <PrintImageName /> */}
     </ImageProvider>
   );
 };
