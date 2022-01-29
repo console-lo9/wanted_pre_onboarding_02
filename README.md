@@ -1,42 +1,49 @@
-# wated_pre_onboarding_02
+<h1 align="center"> Pre Onboarding 2nd 과제 - 상품 등록 </h1>
 
+<h3 align="center"> 서비스 링크 : https://fervent-tereshkova-9b041a.netlify.app/</h3>
 
-### 배포 주소
- https://fervent-tereshkova-9b041a.netlify.app/
+ 
  
 ### 초기 세팅
 
-    1. 설치
-       1. npm install
-       2. npm install react-redux @reduxjs/toolkit
-       3. npm install --save react-router-dom
-    2. 절대 경로 설정
-       1. 참고문헌: https://create-react-app.dev/docs/importing-a-component/#absolute-imports
+1. 설치 
+```bash
+npm install
+npm install react-redux @reduxjs/toolkit
+npm install --save react-router-dom
+```
+2. 절대 경로 설정 - [참고문헌](https://create-react-app.dev/docs/importing-a-component/#absolute-imports)
 
 ### 파일 구조 설정
 
-            src
-            ┃
-            ┣ components
-            ┃               ┣ BuyerRecommendImg
-            ┣ layout      ┣ ProductDelivery
-            ┃ ┣ Inputs  ┗  ...
-            ┃ ┗ Section
-            ┣ pages
-            ┃   ┗ Admin
-            ┣ store
-            ┃ ┗ index.jsx
-            ┣ utils
-            ┃ ┣ svg
-            ┃ ┗ data.json
-            ┃
-            ┗ App.js, index.css, index.js
+     ├── public
+     └── src
+         ├── components
+         │   ├── BuyerRecommendImg
+         │   ├── Etc
+         │   ├── NoticeProductInfo
+         │   ├── ProductBenefit
+         │   ├── ProductDelivery
+         │   ├── ProductInfo
+         │   ├── ProductOptions
+         │   ├── ProductPeriodSetup
+         │   ├── ProductThumbnail
+         │   └── UploadImages
+         ├── layout
+         │   ├── Inputs
+         │   └── Section
+         ├── pages
+         ├── store
+         │   └── Contexts
+         └── utils
+             └── svg
+
 
 ### 과제 중점 사항
     
     
    1. 재사용 가능성 향상
-       1. 재사용 가능한 하나의 버튼 컴포넌를 생성 
+       1. 재사용 가능한 하나의 버튼 컴포넌트를 생성 
        <img src="https://cdn.discordapp.com/attachments/935080254266019874/936439822669742160/2022-01-28_104945.jpg" alt="img">
        
        2. 반복되는 값, 함수, 스타일 등을 따로 지정하여 생산성을 높였다. <img src="https://cdn.discordapp.com/attachments/935080254266019874/936439822262874133/2022-01-28_104910.jpg" alt='img'>
