@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 
-import { ItemContext, ItemProvider } from "./Contexts";
+import { ItemContext } from "store/Contexts/FilterTag";
 
 import { data } from "utils/sampleData";
 

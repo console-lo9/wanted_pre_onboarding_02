@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import OptionEditor from "components/ProductOptions/OptionEditor";
 import OptionList from "components/ProductOptions/OptionList";
 import uuid from "utils/uuid";
@@ -25,6 +25,7 @@ const OptionSet = ({ id, onDelete, onCreate, optionList, deleteOptionSet }) => {
 
       <OptionEditor onCreate={onCreate} optionListId={optionList.id} />
       <OptionList onDelete={onDelete} {...optionList} />
+      <OptionItem onDelete={onDelete} id={id} optionListId={optionListId} />
     </>
   );
 };
