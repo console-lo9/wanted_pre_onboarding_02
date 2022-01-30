@@ -12,9 +12,6 @@ import PrintImageName from "./UploadImage/PrintImageName";
 
 import { ImageProvider } from "./UploadImage/Contexts";
 const Thumbnail = () => {
-  useEffect(() => {
-    // console.log(file && file[0].name);
-  });
   return (
     <SectionBody className={styles.container}>
       <ContentBodyTitle>상품 썸네일</ContentBodyTitle>

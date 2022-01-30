@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useCallback } from "react";
 import { CategoryContext } from "store/Contexts/Category";
 
 import Check from "layout/Check";
@@ -6,11 +6,14 @@ import Check from "layout/Check";
 const Checkbox = ({ value, checked }) => {
   const { cateObject, setCateObject } = useContext(CategoryContext);
 
-  const checkHandler = (e) => {
-    let copyObject = { ...cateObject };
-    copyObject[value] = !checked;
-    setCateObject(copyObject);
-  };
+  const checkHandler = useCallback(
+    (e) => {
+      let copyObject = { ...cateObject };
+      copyObject[value] = !checked;
+      setCateObject(copyObject);
+    },
+    [cateObject, value]
+  );
   return (
     <div>
       <Check

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useCallback, useContext } from "react";
 
 import { CategoryContext } from "store/Contexts/Category";
 
@@ -7,11 +7,14 @@ import Button from "layout/Button";
 const SelectedCategory = ({ value, checked }) => {
   const { cateObject, setCateObject } = useContext(CategoryContext);
 
-  const onClick = (e) => {
-    let copyObject = { ...cateObject };
-    copyObject[value] = !checked;
-    setCateObject(copyObject);
-  };
+  const onClick = useCallback(
+    (e) => {
+      let copyObject = { ...cateObject };
+      copyObject[value] = !checked;
+      setCateObject(copyObject);
+    },
+    [cateObject, value]
+  );
   return (
     <div className={!checked ? styles.notChecked : styles.selectedContainer}>
       {value}{" "}
