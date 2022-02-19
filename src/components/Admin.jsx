@@ -66,11 +66,14 @@ const Admin = () => {
               alt="logo"
             ></img>
           </div>
+
+          {console.log("??")}
           {MockData.map((data) => {
             return (
               <ul key={data.id}>
                 {data.menu}
-                <li>{data.list}</li>
+                {data.id === "m4" &&
+                  data.list.map((item, i) => <li key={i}>{item}</li>)}
               </ul>
             );
           })}
