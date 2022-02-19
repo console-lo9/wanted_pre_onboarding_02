@@ -66,8 +66,6 @@ const Admin = () => {
               alt="logo"
             ></img>
           </div>
-
-          {console.log("??")}
           {MockData.map((data) => {
             return (
               <ul key={data.id}>
@@ -82,9 +80,7 @@ const Admin = () => {
         <div>
           <div className={styles.label}>
             <div className={styles.sectionName}>상품 등록</div>
-            <Button Button tag="save">
-              저장하기
-            </Button>
+            <Button tag="save">저장하기</Button>
           </div>
           <ProductPeriodSetup />
           <ProductInfo />

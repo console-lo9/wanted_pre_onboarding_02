@@ -9,8 +9,8 @@ import SectionBodyContent from "layout/Section/SectionBodyContent";
 const IntroInfo = () => {
   const [info, setInfo] = useState("");
   const handleChange = useCallback((e) => {
-    setInfo(e.target.value);
-  }, info);
+    setInfo((info) => e.target.value);
+  }, []);
   return (
     <SectionBody className={styles.container}>
       <ContentBodyTitle>상품 구성 소개 정보*</ContentBodyTitle>
