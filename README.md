@@ -1,5 +1,6 @@
-# wated_pre_onboarding_02
+<h1 align="center">상품 등록 과제</h1>
 
+![img](https://user-images.githubusercontent.com/43867711/154854135-b655d74c-a5d7-46c4-88ce-cbd27fe84849.gif)
 
 ### 배포 주소
  https://fervent-tereshkova-9b041a.netlify.app/
