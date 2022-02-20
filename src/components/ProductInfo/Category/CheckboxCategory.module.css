@@ -3,9 +3,8 @@
 }
 .checkbox,
 .selected {
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   border: 1px solid #e3e3e3;
   border-radius: 4px;
   width: 300px;
@@ -16,6 +15,13 @@
   overflow: scroll;
 }
 
+.allFalse {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .innerContainer {
   display: flex;
   align-content: center;

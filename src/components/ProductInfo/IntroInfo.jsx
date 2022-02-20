@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 
 import styles from "components/ProductInfo/ProductInfo.module.css";
 
@@ -8,9 +8,9 @@ import SectionBody from "layout/Section/SectionBody";
 import SectionBodyContent from "layout/Section/SectionBodyContent";
 const IntroInfo = () => {
   const [info, setInfo] = useState("");
-  const handleChange = (e) => {
-    setInfo(e.target.value);
-  };
+  const handleChange = useCallback((e) => {
+    setInfo((info) => e.target.value);
+  }, []);
   return (
     <SectionBody className={styles.container}>
       <ContentBodyTitle>상품 구성 소개 정보*</ContentBodyTitle>

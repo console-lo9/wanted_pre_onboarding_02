@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 import ProductCode from "./ProductCode";
 
 import styles from "components/ProductInfo/ProductInfo.module.css";
@@ -12,13 +12,16 @@ const ProductName = () => {
     product: "",
     code: "",
   });
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setInputs({
-      ...inputs,
-      [name]: value,
-    });
-  };
+  const handleChange = useCallback(
+    (e) => {
+      const { name, value } = e.target;
+      setInputs({
+        ...inputs,
+        [name]: value,
+      });
+    },
+    [inputs]
+  );
   const { product } = inputs;
 
   return (

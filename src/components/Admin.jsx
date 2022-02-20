@@ -63,7 +63,8 @@ const Admin = () => {
             return (
               <ul key={data.id}>
                 {data.menu}
-                <li>{data.list}</li>
+                {data.id === "m4" &&
+                  data.list.map((item, i) => <li key={i}>{item}</li>)}
               </ul>
             );
           })}
@@ -72,9 +73,7 @@ const Admin = () => {
         <div>
           <div className={styles.label}>
             <div className={styles.sectionName}>상품 등록</div>
-            <Button Button tag="save">
-              저장하기
-            </Button>
+            <Button tag="save">저장하기</Button>
           </div>
           <ProductPeriodSetup />
           <ProductInfo />
