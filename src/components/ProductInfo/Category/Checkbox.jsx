@@ -14,6 +14,7 @@ const Checkbox = ({ value, checked }) => {
     },
     [cateObject, value]
   );
+
   return (
     <div>
       <Check

@@ -36,7 +36,11 @@ const CheckboxCategory = () => {
           );
         })}
       </div>
-      <div className={styles.selected}>
+      <div
+        className={
+          isAllFalse ? `${styles.selected} ${styles.allFalse}` : styles.selected
+        }
+      >
         {Object.keys(cateObject).map((key) => {
           return (
             <div className={styles.innerContainer} key={key}>
@@ -44,9 +48,11 @@ const CheckboxCategory = () => {
             </div>
           );
         })}
-        <div className={isAllFalse ? 0 : styles.setNone}>
-          <p>카테고리를 지정해 주세요.</p>
-        </div>
+        {isAllFalse && (
+          <div>
+            <p>카테고리를 지정해 주세요.</p>
+          </div>
+        )}
       </div>
     </div>
   );

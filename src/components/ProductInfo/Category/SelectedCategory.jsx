@@ -16,12 +16,12 @@ const SelectedCategory = ({ value, checked }) => {
     [cateObject, value]
   );
   return (
-    <div className={!checked ? styles.notChecked : styles.selectedContainer}>
-      {value}{" "}
-      <Button onClick={onClick} value={value} tag="xBadge">
-        ×
+    checked && (
+      <Button onClick={onClick} value={value} tag="deleteButton">
+        <p>{value}</p>
+        <p>×</p>
       </Button>
-    </div>
+    )
   );
 };
 
