@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 
-import SectionBody from "layout/Section/SectionBody";
 import SectionBodyContent from "layout/Section/SectionBodyContent";
 import UploadInput from "components/UploadImages/UploadInput";
 import Button from "layout/Button";
@@ -17,20 +16,19 @@ const AddImage = ({ multiple }) => {
 
   const changeFileHandler = (e) => {
     const files = e.target.files;
-    Object.entries(files).map(([id, item]) => {
-      setUploadedImg((prev) => {
-        return [{ id: item.id, name: item.name }, ...prev];
-      });
-    });
+
+    for (let i = 0; i < files.length; i++) {
+      setUploadedImg((prev) => [
+        { id: Math.random(), name: files[i].name },
+        ...prev,
+      ]);
+    }
   };
 
   const removeHandler = (e) => {
     const buttonId = e.target.id;
-    setUploadedImg(uploadedImg.filter((data) => data.id !== buttonId));
+    setUploadedImg(uploadedImg.filter((data) => data.id != buttonId));
   };
-  React.useEffect(() => {
-    console.log(uploadedImg);
-  });
 
   return (
     <SectionBodyContent className={styles.flexWrapper}>
