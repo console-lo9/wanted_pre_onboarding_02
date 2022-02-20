@@ -1,8 +1,6 @@
 import React, { useCallback, useContext } from "react";
 
 import { CategoryContext } from "store/Contexts/Category";
-
-import styles from "./SelectedCategory.module.css";
 import Button from "layout/Button";
 const SelectedCategory = ({ value, checked }) => {
   const { cateObject, setCateObject } = useContext(CategoryContext);
